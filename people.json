@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Kiki",
+    "gender": "Female",
+     "film": "Kiki's Delivery Service"
+  },
+  {
+    "id": 2,
+    "name": "Setsuko",
+    "gender": "Female",
+    "film": "Grave of the Fireflies"
+  },
+  {
+    "id": 3,
+    "name": "Seita",
+    "gender": "Female",
+    "film": "Grave of the Fireflies"
+  }
+]
