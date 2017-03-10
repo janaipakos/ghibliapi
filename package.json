@@ -1,0 +1,40 @@
+{
+  "name": "jsonplaceholder",
+  "version": "0.3.3",
+  "description": "A simple fake REST API server for testing and prototyping.",
+  "keywords": [
+    "fake",
+    "JSON",
+    "server",
+    "REST",
+    "dummy",
+    "data",
+    "API",
+    "testing",
+    "prototyping"
+  ],
+  "homepage": "https://ghibliapi.github.io/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ghibliapi/ghibliapi.github.io.git"
+  },
+  "scripts": {
+    "start": "node index",
+    "test": "node test/app"
+  },
+  "dependencies": {
+    "clone": "^1.0.2",
+    "json-server": "^0.8.4"
+  },
+  "devDependencies": {
+    "Faker": "~0.5.11",
+    "rosie": "~1.6.0",
+    "supertest": "^1.2.0",
+    "tape": "^4.5.1",
+    "underscore": "~1.5.2"
+  },
+  "engines": {
+    "node": "7.x"
+  },
+  "license": "MIT"
+}
