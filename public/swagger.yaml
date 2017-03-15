@@ -1,0 +1,942 @@
+# this is an example of the Uber API
+# as a demonstration of an API spec in YAML
+swagger: '2.0'
+info:
+  title: Studio Ghibli API
+  description: |
+    # Studio Ghibli API
+      The Studio Ghibli API catalogs the people, places, and things found in the worlds of Ghibli. It was created to help users discover resources, consume them via HTTP requests, and interact with them in whatever way makes sense. Navigation can be found on the left sidebar, and the right sidebar shows examples of returned objects for successful calls.
+
+    # Getting Started
+      Requests can be made with `curl` or other helper libraries by following regular REST calls. For example, here is how to GET the resource for the film *My Neighbor Tororo*:
+
+      `curl https://ghibliapi.herokuapp.com/films/3`
+
+      Calling this resource will respond with the following object:
+
+      ```json
+      {
+      "id": 3,
+      "title": "My Neighbor Totoro",
+      "description": "Two sisters move to the country with their father in order to be closer to their hospitalized mother, and discover the surrounding trees are inhabited by Totoros, magical spirits of the forest. When the youngest runs away from home, the older sister seeks help from the spirits to find her.",
+      "director": "Hayao Miyazaki",
+      "producer": "Hayao Miyazaki",
+      "release_date": "1988",
+      "rt_score": "93",
+      ...
+      }
+      ```
+
+    # Base URL
+      Users must prepend all resource calls with this base URL:
+
+      `https://ghibliapi.herokuapp.com`
+
+    # Authentication
+       There is no authentication necessary for the Studio Ghbili API. But users can raise an issue if anything seems wrong or if they need help.
+
+    # Workflow
+      Endpoints can be used by themselves, or combined with one another to retrieve more specific information. An example workflow is listed below:
+
+      ### Goal: Get a list of people with the species classification as "spirit."
+        - Call the species endpoint with `/species?name=spirit`
+        - Call the people listed under this endpoint with `/people/<id>`
+        - Combine these results 
+      
+
+    # Use Case
+      There are numerous ways for users to interact with the platform. For example, with the "people" API, users can get customized information about people, such as eye and hair color. Another example is using the "species"" API to find the different films each creature appears in. A more concrete case study is listed below:
+
+      ### A use case for finding information on all the cats of Studio Ghibli.
+
+      Using the Aeson library in Haskell, the user can parse the `people` array to return all of the cats, listed under `/species/5`
+              
+      ```haskell
+      import qualified Data.ByteString.Lazy as L
+      import GHC.Generics
+      import Data.Aeson
+
+      main = do
+          jsonData <- L.readFile "cats.json"
+          let ghibliResponse = decode jsonData :: Maybe GhibliCatResponse
+          let ghibliResults = people <$> ghibliResponse
+          printCat ghibliResults
+
+      printCat :: Maybe [GhibliCatResult] -> IO ()
+      printCat Nothing = print "error loading data"
+      printCat (Just people) = do
+          print $ T.pack "Studio Ghibli Cats:"
+          forM_ people $ \person -> do
+              let dataName = name person
+              let dataGender = gender person
+              let dataAge = age person
+              let dataHairColor = hairColor person
+              let dataEyeColor = eyeColor person
+              let dataFilms = films person
+              print $ T.concat [T.pack 'name: ', dataName
+                               ,T.pack ', gender: ', dataGender
+                               ,T.pack ', age: ', dataAge
+                               ,T.pack ', hair color: ', dataHairColor
+                               ,T.pack ', eye color: '', dataEyeColor
+                               ] 
+      ```
+      
+      The above code will return an IO Action of the requested cats.
+      
+      ```
+      "Studio Ghibli Cats:"
+      "name: Jiji, gender: Male, hair color: Black, eye color: Black"
+      "name: Catbus, gender: Male, hair color: Brown, eye color: Yellow"
+      "name: Niya, gender: Male, hair color: Beige, eye color: White"
+      "name: Renaldo Moon aka Moon aka Muta, gender: Male, hair color: Beige, eye color: White"
+      "name: Cat King, gender: Male, hair color: Grey, eye color: Emerald"
+      "name: Yuki, gender: Female, hair color: White, eye color: Blue"
+      "name: Haru, gender: Female, hair color: Brown, eye color: Brown"
+      "name: Baron Humbert von Gikkingen, gender: Male, hair color: Yellow, eye color: Green"
+      "name: Natori, gender: Male, hair color: Grey, eye color: Blue"
+      ```
+
+  version: "1.0.0"
+  x-logo:
+    url: "./images/logo.svg"
+    backgroundColor: "#FFFFFF"
+# the domain of the service
+host: ghibliapi.herokuapp.com
+# array of all schemes that your API supports
+schemes:
+  - https
+x-tagGroups:
+  - name: Endpoints
+    tags:
+      - Films
+      - People
+      - Locations
+      - Species
+      - Vehicles
+# will be prefixed to all paths
+basePath: /
+produces:
+  - application/json
+paths:
+  /films:
+    get:
+      summary: Return all films
+      description: |
+        The Films endpoint returns information about all of the Studio Ghibli films.
+      tags:
+        - Films
+      parameters:
+        - fields:
+          name: fields
+          in: query
+          description: comma-separated list of fields to include in the response
+          required: false
+          type: string
+        - limit:
+          name: limit
+          in: query
+          required: false
+          description: amount of results (default 50) (maximum 250)
+          type: integer
+          format: int64
+      x-code-samples:
+        - lang: curl
+          source: |
+            curl -X GET -H "Content-Type: application/json" https://ghibliapi.herokuapp.com/films
+        - lang: Ruby
+          source: |
+            require 'net/http'
+
+            uri = URI('https://ghibliapi.herokuapp.com/films')
+            Net::HTTP.get(uri) # => String
+        - lang: Python
+          source: |
+            import urllib2
+
+            urllib2.urlopen('https://ghibliapi.herokuapp.com/films').read()
+
+      responses:
+        200:
+          description: An array of films
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Films'
+          examples:
+            application/json:
+              [{
+              "id": 1,
+              "title": "Castle in the Sky",
+              "description": "The orphan Sheeta inherited a mysterious crystal that links her to the mythical sky-kingdom of Laputa. With the help of resourceful Pazu and a rollicking band of sky pirates, she makes her way to the ruins of the once-great civilization. Sheeta and Pazu must outwit the evil Muska, who plans to use Laputa's science to make himself ruler of the world.",
+              "director": "Hayao Miyazaki",
+              "producer": "Isao Takahata",
+              "release_date": "1986",
+              "rt_score": "95"
+              },
+              {
+              "id": 2,
+              "title": "Grave of the Fireflies",
+              "description": "In the latter part of World War II, a boy and his sister, orphaned when their mother is killed in the firebombing of Tokyo, are left to survive on their own in what remains of civilian life in Japan. The plot follows this boy and his sister as they do their best to survive in the Japanese countryside, battling hunger, prejudice, and pride in their own quiet, personal battle.",
+              "director": "Isao Takahata",
+              "producer": "Toru Hara",
+              "release_date": "1988",
+              "rt_score": "97"
+              }]
+        '400':
+          description: Bad request
+        '404':
+          description: Not found
+  /films/{id}:
+    get:
+      summary: Film ID
+      description: |
+        Returns a film based on a single ID
+      parameters:
+        - name: id
+          in: path
+          description: film `id`
+          required: true
+          type: integer
+          format: int64
+        - name: fields
+          in: query
+          description: comma-separated list of fields to include in the response
+          required: false
+          type: string
+      tags:
+        - Films
+      x-code-samples:
+        - lang: curl
+          source: |
+            curl -X GET -H "Content-Type: application/json" https://ghibliapi.herokuapp.com/films/<id>
+        - lang: Ruby
+          source: |
+            require 'net/http'
+
+            uri = URI('https://ghibliapi.herokuapp.com/films/<id>')
+            Net::HTTP.get(uri) # => String
+        - lang: Python
+          source: |
+            import urllib2
+
+            urllib2.urlopen('https://ghibliapi.herokuapp.com/films/<id>').read()
+      responses:
+        200:
+          description: A single film is returned
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Films'
+          examples:
+            application/json:
+              id: 1
+              title: Castle in the Sky
+              description: The orphan Sheeta inherited a mysterious crystal that links her to the mythical sky-kingdom of Laputa. With the help of resourceful Pazu and a rollicking band of sky pirates, she makes her way to the ruins of the once-great civilization. Sheeta and Pazu must outwit the evil Muska, who plans to use Laputa's science to make himself ruler of the world.
+              director: Hayao Miyazaki
+              producer: Isao Takahata
+              release_date: 1986
+              rt_score: 95
+        '400':
+          description: Bad request
+        '404':
+          description: Not found
+  /people:
+    get:
+      summary: Return all people
+      description: |
+         The People endpoint returns information about all of the Studio Ghibli people. This broadly includes all Ghibli characters, human and non-.
+      tags:
+        - People
+      parameters:
+        - fields:
+          name: fields
+          in: query
+          description: comma-separated list of fields to include in the response
+          required: false
+          type: string
+        - limit:
+          name: limit
+          in: query
+          required: false
+          description: amount of results (default 50) (maximum 250)
+          type: integer
+          format: int64
+      x-code-samples:
+        - lang: curl
+          source: |
+            curl -X GET -H "Content-Type: application/json" https://ghibliapi.herokuapp.com/people
+        - lang: Ruby
+          source: |
+            require 'net/http'
+
+            uri = URI('https://ghibliapi.herokuapp.com/people')
+            Net::HTTP.get(uri) # => String
+        - lang: Python
+          source: |
+            import urllib2
+
+            urllib2.urlopen('https://ghibliapi.herokuapp.com/people').read()
+      responses:
+        200:
+          description: An array of people
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/People'
+          examples:
+            application/json:
+              [{
+              "id": 1,
+              "name": "Ashitaka",
+              "gender": "male",
+              "age": "late teens",
+              "eye_color": "brown",
+              "hair_color": "brown",
+              "films": [
+                "https://ghibliapi.herokuapp.com/films/9"
+              ],
+              "species": "species",
+              "url": "https://ghibliapi.herokuapp.com/person/1"
+            },
+            {
+              "id": 2,
+              "name": "Yakul",
+              "age": "Unknown",
+              "gender": "male",
+              "eye_color": "Grey",
+              "hair_color": "Brown",
+              "films": [
+                "https://ghibliapi.herokuapp.com/films/9"
+              ],
+              "species": "https://ghibliapi.herokuapp.com/species/2",
+              "url": "https://ghibliapi.herokuapp.com/person/2"
+            }]
+        '400':
+          description: Bad request
+        '404':
+          description: Not found
+  /people/{id}:
+    get:
+      summary: People ID
+      description: |
+        Returns a person based on a single ID
+      parameters:
+        - name: id
+          in: path
+          description: person `id`
+          required: true
+          type: integer
+          format: int64
+        - name: fields
+          in: query
+          description: comma-separated list of fields to include in the response
+          required: false
+          type: string
+      tags:
+        - People
+      x-code-samples:
+        - lang: curl
+          source: |
+            curl -X GET -H "Content-Type: application/json" https://ghibliapi.herokuapp.com/people/<id>
+        - lang: Ruby
+          source: |
+            require 'net/http'
+
+            uri = URI('https://ghibliapi.herokuapp.com/people/<id>')
+            Net::HTTP.get(uri) # => String
+        - lang: Python
+          source: |
+            import urllib2
+
+            urllib2.urlopen('https://ghibliapi.herokuapp.com/people/<id>').read()
+      responses:
+        200:
+          description: A single person is returned
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/People'
+          examples:
+            application/json:
+              id: 9
+              name: Cat King
+              gender: Male
+              eye_color: Emerald
+              hair_color: Grey
+              films: https://ghibliapi.herokuapp.com/films/12
+              species: https://ghibliapi.herokuapp.com/species/5
+              url: https://ghibliapi.herokuapp.com/person/9
+        '400':
+          description: Bad request
+        '404':
+          description: Not found
+  /locations:
+    get:
+      summary: Return all locations
+      description: |
+         The Locations endpoint returns information about all of the Studio Ghibli locations. This broadly includes lands, countries, and places.
+      tags:
+        - Locations
+      parameters:
+        - fields:
+          name: fields
+          in: query
+          description: comma-separated list of fields to include in the response
+          required: false
+          type: string
+        - limit:
+          name: limit
+          in: query
+          required: false
+          description: amount of results (default 50) (maximum 250)
+          type: integer
+          format: int64
+      x-code-samples:
+        - lang: curl
+          source: |
+            curl -X GET -H "Content-Type: application/json" https://ghibliapi.herokuapp.com/locations
+        - lang: Ruby
+          source: |
+            require 'net/http'
+
+            uri = URI('https://ghibliapi.herokuapp.com/locations')
+            Net::HTTP.get(uri) # => String
+        - lang: Python
+          source: |
+            import urllib2
+
+            urllib2.urlopen('https://ghibliapi.herokuapp.com/locations').read()
+      responses:
+        200:
+          description: An array of locations
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Locations'
+          examples:
+            application/json:
+              [{
+                "id": 1,
+                "name": "Irontown",
+                "climate": "Continental",
+                "terrain": "Mountain",
+                "surface_water": "40",
+                "residents": [
+                  "https://ghibliapi.herokuapp.com/person/1",
+                  "https://ghibliapi.herokuapp.com/person/2"
+                ],
+                "films": [
+                  "https://ghibliapi.herokuapp.com/films/9"
+                ],
+                "url": [
+                  "https://ghibliapi.herokuapp.com/locations/1"
+                ]
+              },
+              {
+                "id": 2,
+                "name": "Gutiokipanja",
+                "climate": "Continental",
+                "terrain": "Hill",
+                "surface_water": "50",
+                "residents": [
+                  "https://ghibliapi.herokuapp.com/person/1",
+                  "https://ghibliapi.herokuapp.com/person/2"
+                ],
+                "films": [
+                  "https://ghibliapi.herokuapp.com/films/9"
+                ],
+                "url": [
+                  "https://ghibliapi.herokuapp.com/locations/1"
+                ]
+              }]
+        '400':
+          description: Bad request
+        '404':
+          description: Not found
+  /locations/{id}:
+    get:
+      summary: Location ID
+      description: Returns an individual location.
+      parameters:
+        - name: id
+          in: path
+          description: location `id`
+          required: true
+          type: integer
+          format: int64
+        - name: fields
+          in: query
+          description: comma-separated list of fields to include in the response
+          required: false
+          type: string
+      tags:
+        - Locations
+      x-code-samples:
+        - lang: curl
+          source: |
+            curl -X GET -H "Content-Type: application/json" https://ghibliapi.herokuapp.com/locations/<id>
+        - lang: Ruby
+          source: |
+            require 'net/http'
+
+            uri = URI('https://ghibliapi.herokuapp.com/locations/<id>')
+            Net::HTTP.get(uri) # => String
+        - lang: Python
+          source: |
+            import urllib2
+
+            urllib2.urlopen('https://ghibliapi.herokuapp.com/locations/<id>').read()
+      responses:
+        200:
+          description: A single location is returned
+          schema:
+            type: object
+            items:
+              $ref: '#/definitions/Locations'
+          examples:
+            application/json:
+              id: 1
+              name: Irontown
+              climate: Continental
+              terrain: Mountain
+              surface_water: 40
+              residents: [https://ghibliapi.herokuapp.com/person/1,
+                          https://ghibliapi.herokuapp.com/person/1]
+              films: https://ghibliapi.herokuapp.com/films/9
+              url: https://ghibliapi.herokuapp.com/locations/1
+        '400':
+          description: Bad request
+        '404':
+          description: Not found
+  /species:
+    get:
+      summary: Species
+      description: |
+        The Species endpoint returns information about all of the Studio Ghibli species. This includes humans, animals, and spirits et al.
+      tags:
+        - Species
+      parameters:
+        - fields:
+          name: fields
+          in: query
+          description: comma-separated list of fields to include in the response
+          required: false
+          type: string
+        - limit:
+          name: limit
+          in: query
+          required: false
+          description: amount of results (default 50) (maximum 250)
+          type: integer
+          format: int64
+      x-code-samples:
+        - lang: curl
+          source: |
+            curl -X GET -H "Content-Type: application/json" https://ghibliapi.herokuapp.com/species
+        - lang: Ruby
+          source: |
+            require 'net/http'
+
+            uri = URI('https://ghibliapi.herokuapp.com/species')
+            Net::HTTP.get(uri) # => String
+        - lang: Python
+          source: |
+            import urllib2
+
+            urllib2.urlopen('https://ghibliapi.herokuapp.com/species').read()
+      responses:
+        200:
+          description: An array of species
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Species'
+          examples:
+              application/json:
+                [
+                {
+                "id": 9,
+                "name": "Spirit",
+                "classification": "Spirit",
+                "eye_colors": "Red",
+                "hair_colors": "Light Orange",
+                "people": [ 
+                  "https://ghibliapi.herokuapp.com/person/3"
+                  ],
+                "films": [
+                  "https://ghibliapi.herokuapp.com/films/9"
+                  ],
+                "url": "https://ghibliapi.herokuapp.com/species/3"
+                },
+                {
+                "id": 9,
+                "name": "Cat",
+                "classification": "Mammal",
+                "eye_colors": "Brown, Black, Yellow, White, Emerald, Blue, Green",
+                "hair_colors": "White, Black, Brown, Beige, Grey, Yellow",
+                "people": [ 
+                  "https://ghibliapi.herokuapp.com/person/8",
+                  "https://ghibliapi.herokuapp.com/person/9",
+                  "https://ghibliapi.herokuapp.com/person/10",
+                  "https://ghibliapi.herokuapp.com/person/11",
+                  "https://ghibliapi.herokuapp.com/person/12",
+                  "https://ghibliapi.herokuapp.com/person/13"
+                  ],
+                "films": [
+                  "https://ghibliapi.herokuapp.com/films/3",
+                  "https://ghibliapi.herokuapp.com/films/4",
+                  "https://ghibliapi.herokuapp.com/films/8",
+                  "https://ghibliapi.herokuapp.com/films/12",
+                  "https://ghibliapi.herokuapp.com/films/16"
+                  ],
+                "url": "https://ghibliapi.herokuapp.com/species/5"
+                }
+                ]
+        '400':
+          description: Bad request
+        '404':
+          description: Not found
+  /species/{id}:
+    get:
+      summary: Species ID
+      description: Returns an individual species
+      parameters:
+        - name: id
+          in: path
+          description: film `id`
+          required: true
+          type: integer
+          format: int64
+        - name: fields
+          in: query
+          description: comma-separated list of fields to include in the response
+          required: false
+          type: string
+      tags:
+        - Species
+      x-code-samples:
+        - lang: curl
+          source: |
+            curl -X GET -H "Content-Type: application/json" https://ghibliapi.herokuapp.com/species/<id>
+        - lang: Ruby
+          source: |
+            require 'net/http'
+
+            uri = URI('https://ghibliapi.herokuapp.com/species/<id>')
+            Net::HTTP.get(uri) # => String
+        - lang: Python
+          source: |
+            import urllib2
+
+            urllib2.urlopen('https://ghibliapi.herokuapp.com/species/<id>').read()
+      responses:
+        200:
+          description: A single species is returned
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Species'
+          examples:
+            application/json:
+              id: 9
+              name: Cat
+              classification: Mammal
+              eye_colors: "Brown, Black, Yellow, White, Emerald, Blue, Green"
+              hair_colors: "White, Black, Brown, Beige, Grey, Yellow"
+              people: [ 
+                "https://ghibliapi.herokuapp.com/person/8",
+                "https://ghibliapi.herokuapp.com/person/9",
+                "https://ghibliapi.herokuapp.com/person/10",
+                "https://ghibliapi.herokuapp.com/person/11",
+                "https://ghibliapi.herokuapp.com/person/12",
+                "https://ghibliapi.herokuapp.com/person/13"
+                ]
+              films: [
+                "https://ghibliapi.herokuapp.com/films/3",
+                "https://ghibliapi.herokuapp.com/films/4",
+                "https://ghibliapi.herokuapp.com/films/8",
+                "https://ghibliapi.herokuapp.com/films/12",
+                "https://ghibliapi.herokuapp.com/films/16"
+                ]
+              url: https://ghibliapi.herokuapp.com/species/5
+        '400':
+          description: Bad request
+        '404':
+          description: Not found
+          
+  /vehicles:
+    get:
+      summary: Vehicles
+      description: |
+        The Vehicles endpoint returns information about all of the Studio Ghibli vechiles. This includes cars, ships, and planes.
+      tags:
+        - Vehicles
+      parameters:
+        - fields:
+          name: fields
+          in: query
+          description: comma-separated list of fields to include in the response
+          required: false
+          type: string
+        - limit:
+          name: limit
+          in: query
+          required: false
+          description: amount of results (default 50) (maximum 250)
+          type: integer
+          format: int64
+      x-code-samples:
+        - lang: curl
+          source: |
+            curl -X GET -H "Content-Type: application/json" https://ghibliapi.herokuapp.com/vehicles
+        - lang: Ruby
+          source: |
+            require 'net/http'
+
+            uri = URI('https://ghibliapi.herokuapp.com/vehicles')
+            Net::HTTP.get(uri) # => String
+        - lang: Python
+          source: |
+            import urllib2
+
+            urllib2.urlopen('https://ghibliapi.herokuapp.com/vehicles').read()
+      responses:
+        200:
+          description: An array of vehicles
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Vehicles'
+          examples:
+              application/json:
+                [{
+                  "id": 1,
+                  "name": "Air Destroyer Goliath",
+                  "description": "A military airship utilized by the government to access Laputa",
+                  "vehicle_class": "Airship",
+                  "length": "1,000",
+                  "pilot": 'https://ghibliapi.herokuapp.com/people/14',
+                  "films": "https://ghibliapi.herokuapp.com/films/1",
+                  "url": "https://ghibliapi.herokuapp.com/vehicles/1"
+                },
+                {
+                  "id": 2,
+                  "name": "Red Wing",
+                  "description": "An experimental aircraft captured by Porco. Named Savoia S.21",
+                  "vehicle_class": "Airplane",
+                  "length": "20",
+                  "pilot": "https://ghibliapi.herokuapp.com/people/15",
+                  "films": "https://ghibliapi.herokuapp.com/films/6",
+                  "url": "https://ghibliapi.herokuapp.com/vehicles/2"
+                }
+                ]
+        '400':
+          description: Bad request
+        '404':
+          description: Not found
+
+  /vehicles/{id}:
+    get:
+      summary: Vehicle ID
+      description: An individual vehicle
+      parameters:
+        - name: id
+          in: path
+          description: film `id`
+          required: true
+          type: integer
+          format: int64
+        - name: fields
+          in: query
+          description: comma-separated list of fields to include in the response
+          required: false
+          type: string
+      tags:
+        - Vehicles
+      x-code-samples:
+        - lang: curl
+          source: |
+            curl -X GET -H "Content-Type: application/json" https://ghibliapi.herokuapp.com/vehicles/<id>
+        - lang: Ruby
+          source: |
+            require 'net/http'
+
+            uri = URI('https://ghibliapi.herokuapp.com/vehicles/<id>')
+            Net::HTTP.get(uri) # => String
+        - lang: Python
+          source: |
+            import urllib2
+
+            urllib2.urlopen('https://ghibliapi.herokuapp.com/vehicles/<id>').read()
+      responses:
+        200:
+          description: A single vehicle is returned
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Vehicles'
+          examples:
+              application/json:
+                {
+                  "id": 3,
+                  "name": "Sosuke's Boat",
+                  "description": "A toy boat where Sosuke plays",
+                  "vehicle_class": "Boat",
+                  "length": "10",
+                  "pilot": "https://ghibliapi.herokuapp.com/people/16",
+                  "films": "https://ghibliapi.herokuapp.com/films/15",
+                  "url": "https://ghibliapi.herokuapp.com/vehicles/3"
+                }
+        '400':
+          description: Bad request
+        '404':
+          description: Not found
+definitions:
+  Films:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: Unique identifier representing a specific film
+      title:
+        type: string
+        description: Title of the film
+      description:
+        type: string
+        description: Description of the film
+      director:
+        type: string
+        description: Director of the film
+      producer:
+        type: string
+        description: Producer of the film
+      release_date:
+        type: string
+        description: Release year of film
+      rt_score:
+        type: string
+        description: Rotten Tomato score of film
+      species:
+        type: string
+        description: Species found in film
+  People:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Unique identifier representing a specific person
+      name:
+        type: string
+        description: Name of the person
+      gender:
+        type: string
+        description: Gender of the person
+      age:
+        type: string
+        description: Age, if known, of the person
+      eye_color:
+        type: string
+        description: Eye color of the person
+      hair_color:
+        type: string
+        description: Hair color of the person
+      films:
+        type: string
+        description: Array of films the person appears in
+      species:
+        type: string
+        description: Species the person belongs to
+      url:
+        type: string
+        description: Unique url of the person
+  Locations:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: Unique identifier representing a specific location
+      name:
+        type: string
+        description: Name of location
+      climate:
+        type: string
+        description: Climate of location
+      terrain:
+        type: integer
+        description: Terrain type of location
+      surface_water:
+        type: string
+        description: Percent of location covered in water
+      residents:
+        type: integer
+        description: Array of residents in location
+      films:
+        type: string
+        description: Climate of location
+      url:
+        type: integer
+        description: Individual URL of the location
+  Species:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Unique identifier representing a specific species
+      name:
+        type: string
+        description: Name of the species
+      classification:
+        type: string
+        description: Classification of the species
+      eye_color:
+        type: string
+        description: Eye color of the species
+      hair_color:
+        type: string
+        description: Hair color of the species
+      people:
+        type: string
+        description: People belonging to the species
+      films:
+        type: string
+        description: Array of films the species appears in
+      url:
+        type: string
+        description: Unique url of the species
+  Vehicles:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Unique identifier representing a specific vehicle
+      name:
+        type: string
+        description: Name of the vehicles
+      description:
+        type: string
+        description: Description of the vehicle
+      vehicle_class:
+        type: string
+        description: Class of the vehicle
+      length:
+        type: string
+        description: Length of the vehicle in feet
+      pilot:
+        type: string
+        description: Pilot of the vehicle
+      films:
+        type: string
+        description: Array of films the vehicle appears in
+      url:
+        type: string
+        description: Unique URL of the vehicle
+  Error:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
+      fields:
+        type: string

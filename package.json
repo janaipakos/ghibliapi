@@ -1,7 +1,7 @@
 {
-  "name": "jsonplaceholder",
-  "version": "0.3.3",
-  "description": "A simple fake REST API server for testing and prototyping.",
+  "name": "Studio Ghibli API",
+  "version": "1.0.0",
+  "description": "A simple API for Studio Ghibli resources",
   "keywords": [
     "fake",
     "JSON",
@@ -13,10 +13,10 @@
     "testing",
     "prototyping"
   ],
-  "homepage": "https://ghibliapi.github.io/",
+  "homepage": "https://ghibliapi.herokuapp.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ghibliapi/ghibliapi.github.io.git"
+    "url": "https://github.com/janaipakos/ghibliapi.github.io.git"
   },
   "scripts": {
     "start": "node index",
