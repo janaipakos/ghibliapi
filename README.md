@@ -1,197 +1,34 @@
-# JSONPlaceholder
+# Studio Ghibli API
 
-[JSONPlaceholder](http://jsonplaceholder.typicode.com) is a simple fake REST API for testing and prototyping.
+The [Studio Ghibli API](https://ghibliapi.herokuapp.com) catalogs the people, places, and things found in the worlds of Ghibli. It was created to help users discover resources, consume them via HTTP requests, and interact with them in whatever way makes sense. Navigation can be found on the left sidebar, and the right sidebar shows examples of returned objects for successful calls.
 
-It's like an [image placeholder](http://placehold.it/) but for web developers.
+## Endpoints
 
-_JSONPlaceholder is powered by [JSON Server](https://github.com/typicode/json-server)._
+- Films
+- People
+- Locations
+- Species
+- Vehicles
 
-## Why?
+## Getting Started
+Requests can be made with curl or other helper libraries by following regular REST calls. Examples are provided for Ruby and Python with a use case in Haskell. For example, here is how to GET the resource for the film My Neighbor Tororo:
 
-Most of the time when trying a new library, hacking a prototype or following a tutorial, I found myself in need of some data.
+`curl https://ghibliapi.herokuapp.com/films/3`
 
-I didn't like the idea of using some public API because I had the feeling that I was spending more time registering a client and understanding a complex API than focusing on my task.
+Calling this resource will respond with the following object:
 
-But I liked the idea of image placeholders for web designers. So I decided to code a little Express server inspired by that and here is JSONPlaceholder.
-
-You can find it running here and are free to use it in your developments: http://jsonplaceholder.typicode.com. 
-
-Or you can run it locally:
-
-```
-$ npm install -g jsonplaceholder
-$ jsonplaceholder
-```
-
-I hope you will find it useful.
-
-## Features
-
-* No registration
-* Zero-config
-* Basic API
-* "Has many" relationships
-* Filters and nested resources
-* Cross-domain ([CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) and [JSONP](http://en.wikipedia.org/wiki/JSONP))
-* Supports GET, POST, PUT, PATCH, DELETE and OPTIONS verbs
-* Compatible with Backbone, AngularJS, Ember, ...
-
-## Available resources
-
-Let's start with resources, JSONPlaceholder provides the usual suspects:
-
-* Posts http://jsonplaceholder.typicode.com/posts/1
-* Comments http://jsonplaceholder.typicode.com/comments/1
-* Albums http://jsonplaceholder.typicode.com/albums/1
-* Photos http://jsonplaceholder.typicode.com/photos/1
-* Users http://jsonplaceholder.typicode.com/users/1
-* Todos http://jsonplaceholder.typicode.com/todos/1
-
-## How to
-
-Here's some code using jQuery showing what can be done with JSONPlaceholder. 
-Since GitHub loads jQuery, you can simply copy and paste these examples in a console.
-
-### Showing a resource
-
-```javascript
-$.ajax('http://jsonplaceholder.typicode.com/posts/1', {
-  method: 'GET'
-}).then(function(data) {
-  console.log(data);
-});
-```
-
-### Listing resources
-
-```javascript
-$.ajax('http://jsonplaceholder.typicode.com/posts', {
-  method: 'GET'
-}).then(function(data) {
-  console.log(data);
-});
-```
-
-### Creating a resource
-
-```javascript
-// POST adds a random id to the object sent
-$.ajax('http://jsonplaceholder.typicode.com/posts', {
-  method: 'POST',
-  data: {
-    title: 'foo',
-    body: 'bar',
-    userId: 1
-  }
-}).then(function(data) {
-  console.log(data);
-});
-
-/* will return
+```json
 {
-  id: 101,
-  title: 'foo',
-  body: 'bar',
-  userId: 1
+"id": 3,
+"title": "My Neighbor Totoro",
+"description": "Two sisters move to the country with their father in order to be closer to their hospitalized mother, and discover the surrounding trees are inhabited by Totoros, magical spirits of the forest. When the youngest runs away from home, the older sister seeks help from the spirits to find her.",
+"director": "Hayao Miyazaki",
+"producer": "Hayao Miyazaki",
+"release_date": "1988",
+"rt_score": "93",
+...
 }
-*/
 ```
 
-Note: the resource will not be really created on the server but it will be faked as if. 
-
-### Updating a resource
-
-```javascript
-$.ajax('http://jsonplaceholder.typicode.com/posts/1', {
-  method: 'PUT',
-  data: {
-    id: 1,
-    title: 'foo',
-    body: 'bar',
-    userId: 1
-  }
-}).then(function(data) {
-  console.log(data);
-});
-
-/* will return
-{
-  id: 1
-  title: 'foo',
-  body: 'bar',
-  userId: 1
-}
-*/
-```
-
-```javascript
-$.ajax('http://jsonplaceholder.typicode.com/posts/1', {
-  method: 'PATCH',
-  data: {
-    title: 'foo'
-  }
-}).then(function(data) {
-  console.log(data);
-});
-
-/* will return
-{
-  id: 1
-  title: 'foo',
-  body: 'quia et suscipit [...]',
-  userId: 1
-}
-*/
-```
-
-Note: the resource will not be really updated on the server but it will be faked as if. 
-
-### Deleting a resource
-
-```javascript
-$.ajax('http://jsonplaceholder.typicode.com/posts/1', {
-  method: 'DELETE'
-});
-```
-
-Note: the resource will not be really deleted on the server but it will be faked as if. 
-
-### Filtering resources
-
-Basic filtering is supported through query parameters.
-
-```javascript
-// Will return all the posts that belong to the first user
-$.ajax('http://jsonplaceholder.typicode.com/posts?userId=1').then(function(data) {
-  console.log(data);
-});
-```
-
-### Nested resources
-
-One level of nested route is available.
-
-```javascript
-$.ajax('http://jsonplaceholder.typicode.com/posts/1/comments').then(function(data) {
-  console.log(data);
-});
-// Which is equivalent to /comments?postId=1
-```
-
-Here's the list of available nested routes:
-
-* http://jsonplaceholder.typicode.com/posts/1/comments
-* http://jsonplaceholder.typicode.com/albums/1/photos
-* http://jsonplaceholder.typicode.com/users/1/albums
-* http://jsonplaceholder.typicode.com/users/1/todos
-* http://jsonplaceholder.typicode.com/users/1/posts
-
-### JSONP request
-
-```javascript
-$.ajax('http://jsonplaceholder.typicode.com/posts/1', {
-  dataType: 'jsonp'
-}).then(function(data) {
-  console.log(data);
-});
-```
+## Resources
+This API was built using JSON Server, ReDoc, and looking through swapi.co
