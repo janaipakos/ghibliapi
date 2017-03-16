@@ -8,25 +8,19 @@
       "producer": "Isao Takahata",
       "release_date": "1986",
       "rt_score": "95",
-      "species": [
-        "http://swapi.co/api/species/1/"
-      ],
-      "characters": [
-        "http://swapi.co/api/species/1/"
-      ],
       "people": [
-        "http://swapi.co/api/people/"
+        "https://ghibliapi.herokuapp.com/people/"
       ],
-      "countries": [
-        "http://swapi.co/api/planets/"
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/1/"
       ],
-      "weapons": [
-        "http://swapi.co/api/starships/"
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/"
+        "https://ghibliapi.herokuapp.com/vehicles/"
       ],
-      "url": "http://swapi.co/api/starships/"
+      "url": "https://ghibliapi.herokuapp.com/films/1"
     },
     {
       "id": 2,
@@ -36,25 +30,19 @@
       "producer": "Toru Hara",
       "release_date": 1988,
       "rt_score": 97,
-      "species": [
-        "http://swapi.co/api/species/1/"
-      ],
-      "characters": [
-        "http://swapi.co/api/species/1/"
-      ],
       "people": [
-        "http://swapi.co/api/people/"
+        "https://ghibliapi.herokuapp.com/people/"
       ],
-      "countries": [
-        "http://swapi.co/api/planets/"
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/1/"
       ],
-      "weapons": [
-        "http://swapi.co/api/starships/"
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/"
+        "https://ghibliapi.herokuapp.com/vehicles/"
       ],
-      "url": "http://swapi.co/api/starships/"
+      "url": "https://ghibliapi.herokuapp.com/films/2"
     },
     {
       "id": 3,
@@ -64,25 +52,19 @@
       "producer": "Hayao Miyazaki",
       "release_date": 1988,
       "rt_score": 93,
-      "species": [
-        "http://swapi.co/api/species/1/"
-      ],
-      "characters": [
-        "http://swapi.co/api/species/1/"
-      ],
       "people": [
-        "http://swapi.co/api/people/"
+        "https://ghibliapi.herokuapp.com/people/"
       ],
-      "countries": [
-        "http://swapi.co/api/planets/"
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/1/"
       ],
-      "weapons": [
-        "http://swapi.co/api/starships/"
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/"
+        "https://ghibliapi.herokuapp.com/vehicles/"
       ],
-      "url": "http://swapi.co/api/starships/"
+      "url": "https://ghibliapi.herokuapp.com/films/3"
     },
      {
       "id": 4,
@@ -92,25 +74,19 @@
       "producer": "Hayao Miyazaki",
       "release_date": 1989,
       "rt_score": 96,
-      "species": [
-        "http://swapi.co/api/species/1/"
-      ],
-      "characters": [
-        "http://swapi.co/api/species/1/"
-      ],
       "people": [
-        "http://swapi.co/api/people/"
+        "https://ghibliapi.herokuapp.com/people/"
       ],
-      "countries": [
-        "http://swapi.co/api/planets/"
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/1/"
       ],
-      "weapons": [
-        "http://swapi.co/api/starships/"
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/"
+        "https://ghibliapi.herokuapp.com/vehicles/"
       ],
-      "url": "http://swapi.co/api/starships/"
+      "url": "https://ghibliapi.herokuapp.com/films/4"
     },
     {
       "id": 5,
@@ -120,25 +96,19 @@
       "producer": "Toshio Suzuki",
       "release_date": 1991,
       "rt_score": 100,
-      "species": [
-        "http://swapi.co/api/species/1/"
-      ],
-      "characters": [
-        "http://swapi.co/api/species/1/"
-      ],
       "people": [
-        "http://swapi.co/api/people/"
+        "https://ghibliapi.herokuapp.com/people/"
       ],
-      "countries": [
-        "http://swapi.co/api/planets/"
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/1/"
       ],
-      "weapons": [
-        "http://swapi.co/api/starships/"
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/"
+        "https://ghibliapi.herokuapp.com/vehicles/"
       ],
-      "url": "http://swapi.co/api/starships/"
+      "url": "https://ghibliapi.herokuapp.com/films/5"
     },
     {
       "id": 6,
@@ -148,25 +118,19 @@
       "producer": "Toshio Suzuki",
       "release_date": 1992,
       "rt_score": 94,
-      "species": [
-        "http://swapi.co/api/species/1/"
-      ],
-      "characters": [
-        "http://swapi.co/api/species/1/"
-      ],
       "people": [
-        "http://swapi.co/api/people/"
+        "https://ghibliapi.herokuapp.com/people/"
       ],
-      "countries": [
-        "http://swapi.co/api/planets/"
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/1/"
       ],
-      "weapons": [
-        "http://swapi.co/api/starships/"
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/"
+        "https://ghibliapi.herokuapp.com/vehicles/"
       ],
-      "url": "http://swapi.co/api/starships/"
+      "url": "https://ghibliapi.herokuapp.com/films/6"
     },
     {
       "id": 7,
@@ -176,25 +140,19 @@
       "producer": "Toshio Suzuki",
       "release_date": 1994,
       "rt_score": 78,
-      "species": [
-        "http://swapi.co/api/species/1/"
-      ],
-      "characters": [
-        "http://swapi.co/api/species/1/"
-      ],
       "people": [
-        "http://swapi.co/api/people/"
+        "https://ghibliapi.herokuapp.com/people/"
       ],
-      "countries": [
-        "http://swapi.co/api/planets/"
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/1/"
       ],
-      "weapons": [
-        "http://swapi.co/api/starships/"
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/"
+        "https://ghibliapi.herokuapp.com/vehicles/"
       ],
-      "url": "http://swapi.co/api/starships/"
+      "url": "https://ghibliapi.herokuapp.com/films/7"
     },
     {
       "id": 8,
@@ -204,25 +162,19 @@
       "producer": "Toshio Suzuki",
       "release_date": 1995,
       "rt_score": 91,
-      "species": [
-        "http://swapi.co/api/species/1/"
-      ],
-      "characters": [
-        "http://swapi.co/api/species/1/"
-      ],
       "people": [
-        "http://swapi.co/api/people/"
+        "https://ghibliapi.herokuapp.com/people/"
       ],
-      "countries": [
-        "http://swapi.co/api/planets/"
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/1/"
       ],
-      "weapons": [
-        "http://swapi.co/api/starships/"
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/"
+        "https://ghibliapi.herokuapp.com/vehicles/"
       ],
-      "url": "http://swapi.co/api/starships/"
+      "url": "https://ghibliapi.herokuapp.com/films/8"
     },
     {
       "id": 9,
@@ -232,25 +184,19 @@
       "producer": "Toshio Suzuki",
       "release_date": 1997,
       "rt_score": 92,
-      "species": [
-        "http://swapi.co/api/species/1/"
-      ],
-      "characters": [
-        "http://swapi.co/api/species/1/"
-      ],
       "people": [
-        "http://swapi.co/api/people/"
+        "https://ghibliapi.herokuapp.com/people/"
       ],
-      "countries": [
-        "http://swapi.co/api/planets/"
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/1/"
       ],
-      "weapons": [
-        "http://swapi.co/api/starships/"
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/"
+        "https://ghibliapi.herokuapp.com/vehicles/"
       ],
-      "url": "http://swapi.co/api/starships/"
+      "url": "https://ghibliapi.herokuapp.com/films/9"
     },
     {
       "id": 10,
@@ -260,25 +206,19 @@
       "producer": "Toshio Suzuki",
       "release_date": 1999,
       "rt_score": 75,
-      "species": [
-        "http://swapi.co/api/species/1/"
-      ],
-      "characters": [
-        "http://swapi.co/api/species/1/"
-      ],
       "people": [
-        "http://swapi.co/api/people/"
+        "https://ghibliapi.herokuapp.com/people/"
       ],
-      "countries": [
-        "http://swapi.co/api/planets/"
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/1/"
       ],
-      "weapons": [
-        "http://swapi.co/api/starships/"
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/"
+        "https://ghibliapi.herokuapp.com/vehicles/"
       ],
-      "url": "http://swapi.co/api/starships/"
+      "url": "https://ghibliapi.herokuapp.com/films/10"
     },
     {
       "id": 11,
@@ -288,25 +228,19 @@
       "producer": "Toshio Suzuki",
       "release_date": 2001,
       "rt_score": 97,
-      "species": [
-        "http://swapi.co/api/species/1/"
-      ],
-      "characters": [
-        "http://swapi.co/api/species/1/"
-      ],
       "people": [
-        "http://swapi.co/api/people/"
+        "https://ghibliapi.herokuapp.com/people/"
       ],
-      "countries": [
-        "http://swapi.co/api/planets/"
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/1/"
       ],
-      "weapons": [
-        "http://swapi.co/api/starships/"
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/"
+        "https://ghibliapi.herokuapp.com/vehicles/"
       ],
-      "url": "http://swapi.co/api/starships/"
+      "url": "https://ghibliapi.herokuapp.com/films/11"
     },
     {
       "id": 12,
@@ -316,25 +250,19 @@
       "producer": "Toshio Suzuki",
       "release_date": 2002,
       "rt_score": 89,
-      "species": [
-        "http://swapi.co/api/species/1/"
-      ],
-      "characters": [
-        "http://swapi.co/api/species/1/"
-      ],
       "people": [
-        "http://swapi.co/api/people/"
+        "https://ghibliapi.herokuapp.com/people/"
       ],
-      "countries": [
-        "http://swapi.co/api/planets/"
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/1/"
       ],
-      "weapons": [
-        "http://swapi.co/api/starships/"
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/"
+        "https://ghibliapi.herokuapp.com/vehicles/"
       ],
-      "url": "http://swapi.co/api/starships/"
+      "url": "https://ghibliapi.herokuapp.com/films/12"
     },
     {
       "id": 13,
@@ -344,25 +272,19 @@
       "producer": "Toshio Suzuki",
       "release_date": 2004,
       "rt_score": 87,
-      "species": [
-        "http://swapi.co/api/species/1/"
-      ],
-      "characters": [
-        "http://swapi.co/api/species/1/"
-      ],
       "people": [
-        "http://swapi.co/api/people/"
+        "https://ghibliapi.herokuapp.com/people/"
       ],
-      "countries": [
-        "http://swapi.co/api/planets/"
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/1/"
       ],
-      "weapons": [
-        "http://swapi.co/api/starships/"
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/"
+        "https://ghibliapi.herokuapp.com/vehicles/"
       ],
-      "url": "http://swapi.co/api/starships/"
+      "url": "https://ghibliapi.herokuapp.com/films/13"
     },
     {
       "id": 14,
@@ -372,25 +294,19 @@
       "producer": "Toshio Suzuki",
       "release_date": 2006,
       "rt_score": 41,
-      "species": [
-        "http://swapi.co/api/species/1/"
-      ],
-      "characters": [
-        "http://swapi.co/api/species/1/"
-      ],
       "people": [
-        "http://swapi.co/api/people/"
+        "https://ghibliapi.herokuapp.com/people/"
       ],
-      "countries": [
-        "http://swapi.co/api/planets/"
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/1/"
       ],
-      "weapons": [
-        "http://swapi.co/api/starships/"
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/"
+        "https://ghibliapi.herokuapp.com/vehicles/"
       ],
-      "url": "http://swapi.co/api/starships/"
+      "url": "https://ghibliapi.herokuapp.com/films/14"
     },
     {
       "id": 15,
@@ -400,25 +316,19 @@
       "producer": "Toshio Suzuki",
       "release_date": 2008,
       "rt_score": 92,
-      "species": [
-        "http://swapi.co/api/species/1/"
-      ],
-      "characters": [
-        "http://swapi.co/api/species/1/"
-      ],
       "people": [
-        "http://swapi.co/api/people/"
+        "https://ghibliapi.herokuapp.com/people/"
       ],
-      "countries": [
-        "http://swapi.co/api/planets/"
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/1/"
       ],
-      "weapons": [
-        "http://swapi.co/api/starships/"
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/"
+        "https://ghibliapi.herokuapp.com/vehicles/"
       ],
-      "url": "http://swapi.co/api/starships/"
+      "url": "https://ghibliapi.herokuapp.com/films/15"
     },
     {
       "id": 16,
@@ -428,25 +338,19 @@
       "producer": "Toshio Suzuki",
       "release_date": 2010,
       "rt_score": 95,
-      "species": [
-        "http://swapi.co/api/species/1/"
-      ],
-      "characters": [
-        "http://swapi.co/api/species/1/"
-      ],
       "people": [
-        "http://swapi.co/api/people/"
+        "https://ghibliapi.herokuapp.com/people/"
       ],
-      "countries": [
-        "http://swapi.co/api/planets/"
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/1/"
       ],
-      "weapons": [
-        "http://swapi.co/api/starships/"
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/"
+        "https://ghibliapi.herokuapp.com/vehicles/"
       ],
-      "url": "http://swapi.co/api/starships/"
+      "url": "https://ghibliapi.herokuapp.com/films/16"
     },
     {
       "id": 17,
@@ -456,25 +360,19 @@
       "producer": "Toshio Suzuki",
       "release_date": 2011,
       "rt_score": 83,
-      "species": [
-        "http://swapi.co/api/species/1/"
-      ],
-      "characters": [
-        "http://swapi.co/api/species/1/"
-      ],
       "people": [
-        "http://swapi.co/api/people/"
+        "https://ghibliapi.herokuapp.com/people/"
       ],
-      "countries": [
-        "http://swapi.co/api/planets/"
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/1/"
       ],
-      "weapons": [
-        "http://swapi.co/api/starships/"
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/"
+        "https://ghibliapi.herokuapp.com/vehicles/"
       ],
-      "url": "http://swapi.co/api/starships/"
+      "url": "https://ghibliapi.herokuapp.com/films/17"
     },
     {
       "id": 18,
@@ -484,25 +382,19 @@
       "producer": "Toshio Suzuki",
       "release_date": 2013,
       "rt_score": 89,
-      "species": [
-        "http://swapi.co/api/species/1/"
-      ],
-      "characters": [
-        "http://swapi.co/api/species/1/"
-      ],
       "people": [
-        "http://swapi.co/api/people/"
+        "https://ghibliapi.herokuapp.com/people/"
       ],
-      "countries": [
-        "http://swapi.co/api/planets/"
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/1/"
       ],
-      "weapons": [
-        "http://swapi.co/api/starships/"
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/"
+        "https://ghibliapi.herokuapp.com/vehicles/"
       ],
-      "url": "http://swapi.co/api/starships/"
+      "url": "https://ghibliapi.herokuapp.com/films/18"
     },
     {
       "id": 19,
@@ -512,25 +404,19 @@
       "producer": "Yoshiaki Nishimura",
       "release_date": 2013,
       "rt_score": 100,
-      "species": [
-        "http://swapi.co/api/species/1/"
-      ],
-      "characters": [
-        "http://swapi.co/api/species/1/"
-      ],
       "people": [
-        "http://swapi.co/api/people/"
+        "https://ghibliapi.herokuapp.com/people/"
       ],
-      "countries": [
-        "http://swapi.co/api/planets/"
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/1/"
       ],
-      "weapons": [
-        "http://swapi.co/api/starships/"
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/"
+        "https://ghibliapi.herokuapp.com/vehicles/"
       ],
-      "url": "http://swapi.co/api/starships/"
+      "url": "https://ghibliapi.herokuapp.com/films/19"
     },
     {
       "id": 20,
@@ -540,25 +426,19 @@
       "producer": "Yoshiaki Nishimura",
       "release_date": 2014,
       "rt_score": 92,
-      "species": [
-        "http://swapi.co/api/species/1/"
-      ],
-      "characters": [
-        "http://swapi.co/api/species/1/"
-      ],
       "people": [
-        "http://swapi.co/api/people/"
+        "https://ghibliapi.herokuapp.com/people/"
       ],
-      "countries": [
-        "http://swapi.co/api/planets/"
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/1/"
       ],
-      "weapons": [
-        "http://swapi.co/api/starships/"
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
       ],
       "vehicles": [
-        "http://swapi.co/api/vehicles/"
+        "https://ghibliapi.herokuapp.com/vehicles/"
       ],
-      "url": "http://swapi.co/api/starships/"
+      "url": "https://ghibliapi.herokuapp.com/films/20"
     }
   ],
   "people": [

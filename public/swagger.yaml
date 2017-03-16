@@ -816,9 +816,18 @@ definitions:
       rt_score:
         type: string
         description: Rotten Tomato score of film
+      people:
+        type: string
+        description: People found in film
       species:
         type: string
         description: Species found in film
+      locations:
+        type: string
+        description: Locations found in film
+      url:
+        type: string
+        description: URL of film
   People:
     type: object
     properties:
