@@ -7,6 +7,8 @@ info:
     # Studio Ghibli API
       The Studio Ghibli API catalogs the people, places, and things found in the worlds of Ghibli. It was created to help users discover resources, consume them via HTTP requests, and interact with them in whatever way makes sense. Navigation can be found on the left sidebar, and the right sidebar shows examples of returned objects for successful calls.
 
+      Users can raise an issue, ask for help, or find a contribution guide at the main repo: [https://github.com/janaipakos/ghibliapi](https://github.com/janaipakos/ghibliapi)
+  
     # Getting Started
       Requests can be made with `curl` or other helper libraries by following regular REST calls. For example, here is how to GET the resource for the film *My Neighbor Tororo*:
 
@@ -33,7 +35,7 @@ info:
       `https://ghibliapi.herokuapp.com`
 
     # Authentication
-       There is no authentication necessary for the Studio Ghbili API. But users can raise an issue if anything seems wrong or if they need help.
+       There is no authentication necessary for the Studio Ghbili API.
 
     # Workflow
       Endpoints can be used by themselves, or combined with one another to retrieve more specific information. An example workflow is listed below:
