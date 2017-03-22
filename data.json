@@ -453,7 +453,7 @@
         "https://ghibliapi.herokuapp.com/films/9"
       ],
       "species": "species",
-      "url": "https://ghibliapi.herokuapp.com/person/1"
+      "url": "https://ghibliapi.herokuapp.com/people/1"
     },
     {
       "id": 2,
@@ -466,7 +466,7 @@
         "https://ghibliapi.herokuapp.com/films/9"
       ],
       "species": "https://ghibliapi.herokuapp.com/species/2",
-      "url": "https://ghibliapi.herokuapp.com/person/2"
+      "url": "https://ghibliapi.herokuapp.com/people/2"
     },
     {
       "id": 3,
@@ -479,7 +479,7 @@
         "https://ghibliapi.herokuapp.com/films/9"
       ],
       "species": "https://ghibliapi.herokuapp.com/species/2",
-      "url": "https://ghibliapi.herokuapp.com/person/3"
+      "url": "https://ghibliapi.herokuapp.com/people/3"
     },
     {
       "id": 4,
@@ -492,7 +492,7 @@
         "https://ghibliapi.herokuapp.com/films/9"
       ],
       "species": "https://ghibliapi.herokuapp.com/species/4",
-      "url": "https://ghibliapi.herokuapp.com/person/4"
+      "url": "https://ghibliapi.herokuapp.com/people/4"
     },
     {
       "id": 5,
@@ -505,7 +505,7 @@
         "https://ghibliapi.herokuapp.com/films/4"
       ],
       "species": "https://ghibliapi.herokuapp.com/species/5",
-      "url": "https://ghibliapi.herokuapp.com/person/5"
+      "url": "https://ghibliapi.herokuapp.com/people/5"
     },
     {
       "id": 6,
@@ -518,7 +518,7 @@
         "https://ghibliapi.herokuapp.com/films/3"
       ],
       "species": "https://ghibliapi.herokuapp.com/species/5",
-      "url": "https://ghibliapi.herokuapp.com/person/6"
+      "url": "https://ghibliapi.herokuapp.com/people/6"
     },
     {
       "id": 7,
@@ -531,7 +531,7 @@
         "https://ghibliapi.herokuapp.com/films/16"
       ],
       "species": "https://ghibliapi.herokuapp.com/species/5",
-      "url": "https://ghibliapi.herokuapp.com/person/7"
+      "url": "https://ghibliapi.herokuapp.com/people/7"
     },
     {
       "id": 8,
@@ -545,7 +545,7 @@
         "https://ghibliapi.herokuapp.com/films/8"
       ],
       "species": "https://ghibliapi.herokuapp.com/species/5",
-      "url": "https://ghibliapi.herokuapp.com/person/8"
+      "url": "https://ghibliapi.herokuapp.com/people/8"
     },
     {
       "id": 9,
@@ -558,7 +558,7 @@
         "https://ghibliapi.herokuapp.com/films/12"
       ],
       "species": "https://ghibliapi.herokuapp.com/species/5",
-      "url": "https://ghibliapi.herokuapp.com/person/9"
+      "url": "https://ghibliapi.herokuapp.com/people/9"
     },
     {
       "id": 10,
@@ -571,7 +571,7 @@
         "https://ghibliapi.herokuapp.com/films/12"
       ],
       "species": "https://ghibliapi.herokuapp.com/species/5",
-      "url": "https://ghibliapi.herokuapp.com/person/10"
+      "url": "https://ghibliapi.herokuapp.com/people/10"
     },
     {
       "id": 11,
@@ -584,7 +584,7 @@
         "https://ghibliapi.herokuapp.com/films/12"
       ],
       "species": "https://ghibliapi.herokuapp.com/species/5",
-      "url": "https://ghibliapi.herokuapp.com/person/11"
+      "url": "https://ghibliapi.herokuapp.com/people/11"
     },
     {
       "id": 12,
@@ -598,7 +598,7 @@
         "https://ghibliapi.herokuapp.com/films/12"
       ],
       "species": "https://ghibliapi.herokuapp.com/species/5",
-      "url": "https://ghibliapi.herokuapp.com/person/12"
+      "url": "https://ghibliapi.herokuapp.com/people/12"
     },
     {
       "id": 13,
@@ -611,7 +611,7 @@
         "https://ghibliapi.herokuapp.com/films/12"
       ],
       "species": "https://ghibliapi.herokuapp.com/species/5",
-      "url": "https://ghibliapi.herokuapp.com/person/13"
+      "url": "https://ghibliapi.herokuapp.com/people/13"
     },
     {
       "id": 14,
@@ -624,7 +624,7 @@
         "https://ghibliapi.herokuapp.com/films/1"
       ],
       "species": "https://ghibliapi.herokuapp.com/species/1",
-      "url": "https://ghibliapi.herokuapp.com/person/14"
+      "url": "https://ghibliapi.herokuapp.com/people/14"
     },
     {
       "id": 15,
@@ -637,7 +637,7 @@
         "https://ghibliapi.herokuapp.com/films/6"
       ],
       "species": "https://ghibliapi.herokuapp.com/species/1",
-      "url": "https://ghibliapi.herokuapp.com/person/15"
+      "url": "https://ghibliapi.herokuapp.com/people/15"
     },
     {
       "id": 16,
@@ -650,7 +650,7 @@
         "https://ghibliapi.herokuapp.com/films/15"
       ],
       "species": "https://ghibliapi.herokuapp.com/species/1",
-      "url": "https://ghibliapi.herokuapp.com/person/16"
+      "url": "https://ghibliapi.herokuapp.com/people/16"
     }
   ],
   "locations": [
@@ -661,8 +661,8 @@
       "terrain": "Mountain",
       "surface_water": "40",
       "residents": [
-        "https://ghibliapi.herokuapp.com/person/1",
-        "https://ghibliapi.herokuapp.com/person/2"
+        "https://ghibliapi.herokuapp.com/people/1",
+        "https://ghibliapi.herokuapp.com/people/2"
       ],
       "films": [
         "https://ghibliapi.herokuapp.com/films/9"
@@ -678,8 +678,8 @@
       "terrain": "Hill",
       "surface_water": "50",
       "residents": [
-        "https://ghibliapi.herokuapp.com/person/1",
-        "https://ghibliapi.herokuapp.com/person/2"
+        "https://ghibliapi.herokuapp.com/people/1",
+        "https://ghibliapi.herokuapp.com/people/2"
       ],
       "films": [
         "https://ghibliapi.herokuapp.com/films/9"
@@ -695,11 +695,11 @@
       "terrain": "Plain",
       "surface_water": "30",
       "residents": [
-        "https://ghibliapi.herokuapp.com/person/8",
-        "https://ghibliapi.herokuapp.com/person/9",
-        "https://ghibliapi.herokuapp.com/person/10",
-        "https://ghibliapi.herokuapp.com/person/11",
-        "https://ghibliapi.herokuapp.com/person/12"
+        "https://ghibliapi.herokuapp.com/people/8",
+        "https://ghibliapi.herokuapp.com/people/9",
+        "https://ghibliapi.herokuapp.com/people/10",
+        "https://ghibliapi.herokuapp.com/people/11",
+        "https://ghibliapi.herokuapp.com/people/12"
       ],
       "films": [
         "https://ghibliapi.herokuapp.com/films/12"
@@ -1149,12 +1149,12 @@
         "https://ghibliapi.herokuapp.com/people/5",
         "https://ghibliapi.herokuapp.com/people/6",
         "https://ghibliapi.herokuapp.com/people/7",
-        "https://ghibliapi.herokuapp.com/person/8",
-        "https://ghibliapi.herokuapp.com/person/9",
-        "https://ghibliapi.herokuapp.com/person/10",
-        "https://ghibliapi.herokuapp.com/person/11",
-        "https://ghibliapi.herokuapp.com/person/12",
-        "https://ghibliapi.herokuapp.com/person/13"
+        "https://ghibliapi.herokuapp.com/people/8",
+        "https://ghibliapi.herokuapp.com/people/9",
+        "https://ghibliapi.herokuapp.com/people/10",
+        "https://ghibliapi.herokuapp.com/people/11",
+        "https://ghibliapi.herokuapp.com/people/12",
+        "https://ghibliapi.herokuapp.com/people/13"
       ],
       "films": [
         "https://ghibliapi.herokuapp.com/films/3",
