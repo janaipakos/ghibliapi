@@ -13,13 +13,13 @@ The [Studio Ghibli API](https://ghibliapi.herokuapp.com) catalogs the people, pl
 ## Getting Started
 Requests can be made with curl or other helper libraries by following regular REST calls. Examples are provided for Ruby and Python with a use case in Haskell. For example, here is how to GET the resource for the film My Neighbor Tororo:
 
-`curl https://ghibliapi.herokuapp.com/films/3`
+`curl https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49`
 
 Calling this resource will respond with the following object:
 
 ```json
 {
-"id": 3,
+"id": "58611129-2dbc-4a81-a72f-77ddfc1b1b49",
 "title": "My Neighbor Totoro",
 "description": "Two sisters move to the country with their father in order to be closer to their hospitalized mother, and discover the surrounding trees are inhabited by Totoros, magical spirits of the forest. When the youngest runs away from home, the older sister seeks help from the spirits to find her.",
 "director": "Hayao Miyazaki",
