@@ -19,6 +19,7 @@ Wrappers in different response languages are always welcome. Additionally, the t
     - Pick a movie
     - Watch this movie while noting people, locations, species, and vehicles (or whatever end point)
     - Add these to `./data.json` while following the layout of other objects. Note that some other referenced resources may not exist, so beware of gaps. For example, if you see a movie featuring a character that does not yet exist in the .json, add that character to the people array
+    - UUIDs can be generated easily in any programming language as well as linux with `uuidgen` (OSX has a `uuidgen` command, but it doesn't follow the spec), and sites like https://www.uuidgenerator.net
 
 - `public/swagger.yaml`:
     - Feel free to clean up the schema if you notice any inconsistencies or if you know a more optimal swagger layout
