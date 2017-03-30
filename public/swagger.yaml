@@ -1,5 +1,3 @@
-# this is an example of the Uber API
-# as a demonstration of an API spec in YAML
 swagger: '2.0'
 info:
   title: Studio Ghibli API
@@ -12,13 +10,13 @@ info:
     # Getting Started
       Requests can be made with `curl` or other helper libraries by following regular REST calls. For example, here is how to GET the resource for the film *My Neighbor Tororo*:
 
-      `curl https://ghibliapi.herokuapp.com/films/3`
+      `curl https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49`
 
       Calling this resource will respond with the following object:
 
       ```json
       {
-      "id": 3,
+      "id": "58611129-2dbc-4a81-a72f-77ddfc1b1b49",
       "title": "My Neighbor Totoro",
       "description": "Two sisters move to the country with their father in order to be closer to their hospitalized mother, and discover the surrounding trees are inhabited by Totoros, magical spirits of the forest. When the youngest runs away from home, the older sister seeks help from the spirits to find her.",
       "director": "Hayao Miyazaki",
@@ -42,7 +40,7 @@ info:
 
       ### Goal: Get a list of people with the species classification as "spirit."
         - Call the species endpoint with `/species?name=spirit`
-        - Call the people listed under this endpoint with `/people/<id>`
+        - Call the people listed under this endpoint with `/people/<uuid>`
         - Combine these results 
       
 
@@ -51,7 +49,7 @@ info:
 
       ### A use case for finding information on all the cats of Studio Ghibli.
 
-      Using the Aeson library in Haskell, the user can parse the `people` array to return all of the cats, listed under `/species/5`
+      Using the Aeson library in Haskell, the user can parse the `people` array to return all of the cats, listed under `/species/603428ba-8a86-4b0b-a9f1-65df6abef3d3`
               
       ```haskell
       import qualified Data.ByteString.Lazy as L
@@ -98,7 +96,7 @@ info:
       "name: Natori, gender: Male, hair color: Grey, eye color: Blue"
       ```
 
-  version: "1.0.0"
+  version: "1.0.1"
   x-logo:
     url: "./images/logo.svg"
     backgroundColor: "#FFFFFF"
@@ -167,7 +165,7 @@ paths:
           examples:
             application/json:
               [{
-              "id": 1,
+              "id": "2baf70d1-42bb-4437-b551-e5fed5a87abe",
               "title": "Castle in the Sky",
               "description": "The orphan Sheeta inherited a mysterious crystal that links her to the mythical sky-kingdom of Laputa. With the help of resourceful Pazu and a rollicking band of sky pirates, she makes her way to the ruins of the once-great civilization. Sheeta and Pazu must outwit the evil Muska, who plans to use Laputa's science to make himself ruler of the world.",
               "director": "Hayao Miyazaki",
@@ -176,7 +174,7 @@ paths:
               "rt_score": "95"
               },
               {
-              "id": 2,
+              "id": "12cfb892-aac0-4c5b-94af-521852e46d6a",
               "title": "Grave of the Fireflies",
               "description": "In the latter part of World War II, a boy and his sister, orphaned when their mother is killed in the firebombing of Tokyo, are left to survive on their own in what remains of civilian life in Japan. The plot follows this boy and his sister as they do their best to survive in the Japanese countryside, battling hunger, prejudice, and pride in their own quiet, personal battle.",
               "director": "Isao Takahata",
@@ -231,7 +229,7 @@ paths:
               $ref: '#/definitions/Films'
           examples:
             application/json:
-              id: 1
+              id: 2baf70d1-42bb-4437-b551-e5fed5a87abe
               title: Castle in the Sky
               description: The orphan Sheeta inherited a mysterious crystal that links her to the mythical sky-kingdom of Laputa. With the help of resourceful Pazu and a rollicking band of sky pirates, she makes her way to the ruins of the once-great civilization. Sheeta and Pazu must outwit the evil Muska, who plans to use Laputa's science to make himself ruler of the world.
               director: Hayao Miyazaki
@@ -288,30 +286,30 @@ paths:
           examples:
             application/json:
               [{
-              "id": 1,
+              "id": "ba924631-068e-4436-b6de-f3283fa848f0",
               "name": "Ashitaka",
               "gender": "male",
               "age": "late teens",
               "eye_color": "brown",
               "hair_color": "brown",
               "films": [
-                "https://ghibliapi.herokuapp.com/films/9"
+                "https://ghibliapi.herokuapp.com/films/030555b3-4c92-4fce-93fb-e70c3ae3df8b"
               ],
-              "species": "species",
-              "url": "https://ghibliapi.herokuapp.com/person/1"
+              "species":    "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+              "url": "https://ghibliapi.herokuapp.com/people/ba924631-068e-4436-b6de-f3283fa848f0"
             },
             {
-              "id": 2,
+              "id": "030555b3-4c92-4fce-93fb-e70c3ae3df8b",
               "name": "Yakul",
               "age": "Unknown",
               "gender": "male",
               "eye_color": "Grey",
               "hair_color": "Brown",
               "films": [
-                "https://ghibliapi.herokuapp.com/films/9"
+                "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
               ],
-              "species": "https://ghibliapi.herokuapp.com/species/2",
-              "url": "https://ghibliapi.herokuapp.com/person/2"
+              "species": "https://ghibliapi.herokuapp.com/species/6bc92fdd-b0f4-4286-ad71-1f99fb4a0d1e",
+              "url": "https://ghibliapi.herokuapp.com/people/030555b3-4c92-4fce-93fb-e70c3ae3df8b"
             }]
         '400':
           description: Bad request
@@ -360,14 +358,14 @@ paths:
               $ref: '#/definitions/People'
           examples:
             application/json:
-              id: 9
+              id: ba924631-068e-4436-b6de-f3283fa848f0
               name: Cat King
               gender: Male
               eye_color: Emerald
               hair_color: Grey
-              films: https://ghibliapi.herokuapp.com/films/12
-              species: https://ghibliapi.herokuapp.com/species/5
-              url: https://ghibliapi.herokuapp.com/person/9
+              films: https://ghibliapi.herokuapp.com/films/90b72513-afd4-4570-84de-a56c312fdf81
+              species: https://ghibliapi.herokuapp.com/species/603428ba-8a86-4b0b-a9f1-65df6abef3d3
+              url: https://ghibliapi.herokuapp.com/people/3042818d-a8bb-4cba-8180-c19249822d57
         '400':
           description: Bad request
         '404':
@@ -418,37 +416,37 @@ paths:
           examples:
             application/json:
               [{
-                "id": 1,
+                "id": "11014596-71b0-4b3e-b8c0-1c4b15f28b9a",
                 "name": "Irontown",
                 "climate": "Continental",
                 "terrain": "Mountain",
                 "surface_water": "40",
                 "residents": [
-                  "https://ghibliapi.herokuapp.com/person/1",
-                  "https://ghibliapi.herokuapp.com/person/2"
+                  "https://ghibliapi.herokuapp.com/people/ba924631-068e-4436-b6de-f3283fa848f0",
+                  "https://ghibliapi.herokuapp.com/people/030555b3-4c92-4fce-93fb-e70c3ae3df8b"
                 ],
                 "films": [
-                  "https://ghibliapi.herokuapp.com/films/9"
+                  "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
                 ],
                 "url": [
-                  "https://ghibliapi.herokuapp.com/locations/1"
+                  "https://ghibliapi.herokuapp.com/locations/11014596-71b0-4b3e-b8c0-1c4b15f28b9a"
                 ]
               },
               {
-                "id": 2,
+                "id": "11014596-71b0-4b3e-b8c0-1c4b15f28b9a",
                 "name": "Gutiokipanja",
                 "climate": "Continental",
                 "terrain": "Hill",
                 "surface_water": "50",
                 "residents": [
-                  "https://ghibliapi.herokuapp.com/person/1",
-                  "https://ghibliapi.herokuapp.com/person/2"
+                  "https://ghibliapi.herokuapp.com/people/ba924631-068e-4436-b6de-f3283fa848f0",
+                  "https://ghibliapi.herokuapp.com/people/030555b3-4c92-4fce-93fb-e70c3ae3df8b"
                 ],
                 "films": [
-                  "https://ghibliapi.herokuapp.com/films/9"
+                  "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
                 ],
                 "url": [
-                  "https://ghibliapi.herokuapp.com/locations/1"
+                  "https://ghibliapi.herokuapp.com/locations/11014596-71b0-4b3e-b8c0-1c4b15f28b9a"
                 ]
               }]
         '400':
@@ -502,10 +500,9 @@ paths:
               climate: Continental
               terrain: Mountain
               surface_water: 40
-              residents: [https://ghibliapi.herokuapp.com/person/1,
-                          https://ghibliapi.herokuapp.com/person/1]
-              films: https://ghibliapi.herokuapp.com/films/9
-              url: https://ghibliapi.herokuapp.com/locations/1
+              residents: [https://ghibliapi.herokuapp.com/people/ba924631-068e-4436-b6de-f3283fa848f0]
+              films: https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6
+              url: https://ghibliapi.herokuapp.com/locations/11014596-71b0-4b3e-b8c0-1c4b15f28b9a
         '400':
           description: Bad request
         '404':
@@ -556,42 +553,33 @@ paths:
           examples:
               application/json:
                 [
-                {
-                "id": 9,
-                "name": "Spirit",
-                "classification": "Spirit",
-                "eye_colors": "Red",
-                "hair_colors": "Light Orange",
-                "people": [ 
-                  "https://ghibliapi.herokuapp.com/person/3"
+                { 
+                  "id": "b5a92d0e-5fb4-43d4-ba60-c012135958e4",
+                  "name": "Spirit",
+                  "classification": "Spirit",
+                  "eye_colors": "Red",
+                  "hair_colors": "Light Orange",
+                  "url": "htps://ghibliapi.herokuapp.com/species/b5a92d0e-5fb4-43d4-ba60-c012135958e4",
+                  "people": [
+                    "https://ghibliapi.herokuapp.com/people/ca568e87-4ce2-4afa-a6c5-51f4ae80a60b"
                   ],
-                "films": [
-                  "https://ghibliapi.herokuapp.com/films/9"
-                  ],
-                "url": "https://ghibliapi.herokuapp.com/species/3"
+                  "films": [
+                    "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
+                  ]
                 },
-                {
-                "id": 9,
-                "name": "Cat",
-                "classification": "Mammal",
-                "eye_colors": "Brown, Black, Yellow, White, Emerald, Blue, Green",
-                "hair_colors": "White, Black, Brown, Beige, Grey, Yellow",
-                "people": [ 
-                  "https://ghibliapi.herokuapp.com/person/8",
-                  "https://ghibliapi.herokuapp.com/person/9",
-                  "https://ghibliapi.herokuapp.com/person/10",
-                  "https://ghibliapi.herokuapp.com/person/11",
-                  "https://ghibliapi.herokuapp.com/person/12",
-                  "https://ghibliapi.herokuapp.com/person/13"
+                { 
+                  "id": "f25fa661-3073-414d-968a-ab062e3065f7",
+                  "name": "God",
+                  "classification": "God",
+                  "eye_colors": "Brown",
+                  "hair_colors": "White",
+                  "url": "https://ghibliapi.herokuapp.com/species/f25fa661-3073-414d-968a-ab062e3065f7",
+                  "people": [
+                    "Moro"
                   ],
-                "films": [
-                  "https://ghibliapi.herokuapp.com/films/3",
-                  "https://ghibliapi.herokuapp.com/films/4",
-                  "https://ghibliapi.herokuapp.com/films/8",
-                  "https://ghibliapi.herokuapp.com/films/12",
-                  "https://ghibliapi.herokuapp.com/films/16"
-                  ],
-                "url": "https://ghibliapi.herokuapp.com/species/5"
+                  "films": [
+                    "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
+                  ]
                 }
                 ]
         '400':
@@ -640,27 +628,30 @@ paths:
               $ref: '#/definitions/Species'
           examples:
             application/json:
-              id: 9
+              id: 603428ba-8a86-4b0b-a9f1-65df6abef3d3
               name: Cat
               classification: Mammal
               eye_colors: "Brown, Black, Yellow, White, Emerald, Blue, Green"
               hair_colors: "White, Black, Brown, Beige, Grey, Yellow"
               people: [ 
-                "https://ghibliapi.herokuapp.com/person/8",
-                "https://ghibliapi.herokuapp.com/person/9",
-                "https://ghibliapi.herokuapp.com/person/10",
-                "https://ghibliapi.herokuapp.com/person/11",
-                "https://ghibliapi.herokuapp.com/person/12",
-                "https://ghibliapi.herokuapp.com/person/13"
+                "https://ghibliapi.herokuapp.com/people/7151abc6-1a9e-4e6a-9711-ddb50ea572ec",
+                "https://ghibliapi.herokuapp.com/people/f467e18e-3694-409f-bdb3-be891ade1106",
+                "https://ghibliapi.herokuapp.com/people/89026b3a-abc4-4053-ab1a-c6d2eea68faa",
+                "https://ghibliapi.herokuapp.com/people/6b3facea-ea33-47b1-96ce-3fc737b119b8",
+                "https://ghibliapi.herokuapp.com/people/3042818d-a8bb-4cba-8180-c19249822d57",
+                "https://ghibliapi.herokuapp.com/people/58d1973f-f247-47d7-9358-e56cb0d2b5a6",
+                "https://ghibliapi.herokuapp.com/people/a3d8e70f-46a0-4e5a-b850-db01620d6b92",
+                "https://ghibliapi.herokuapp.com/people/fc196c4f-0201-4ed2-9add-c6403f7c4d32",
+                "https://ghibliapi.herokuapp.com/people/466bc926-2024-4653-ac63-fe52f2dc8c7b"
                 ]
               films: [
-                "https://ghibliapi.herokuapp.com/films/3",
-                "https://ghibliapi.herokuapp.com/films/4",
-                "https://ghibliapi.herokuapp.com/films/8",
-                "https://ghibliapi.herokuapp.com/films/12",
-                "https://ghibliapi.herokuapp.com/films/16"
+                "https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49",
+                "https://ghibliapi.herokuapp.com/films/ea660b10-85c4-4ae3-8a5f-41cea3648e3e",
+                "https://ghibliapi.herokuapp.com/films/ff24da26-a969-4f0e-ba1e-a122ead6c6e3",
+                "https://ghibliapi.herokuapp.com/films/90b72513-afd4-4570-84de-a56c312fdf81",
+                "https://ghibliapi.herokuapp.com/films/2de9426b-914a-4a06-a3a0-5e6d9d3886f6"
                 ]
-              url: https://ghibliapi.herokuapp.com/species/5
+              url: https://ghibliapi.herokuapp.com/species/603428ba-8a86-4b0b-a9f1-65df6abef3d3
         '400':
           description: Bad request
         '404':
@@ -712,24 +703,24 @@ paths:
           examples:
               application/json:
                 [{
-                  "id": 1,
+                  "id": "4e09b023-f650-4747-9ab9-eacf14540cfb",
                   "name": "Air Destroyer Goliath",
                   "description": "A military airship utilized by the government to access Laputa",
                   "vehicle_class": "Airship",
                   "length": "1,000",
-                  "pilot": 'https://ghibliapi.herokuapp.com/people/14',
-                  "films": "https://ghibliapi.herokuapp.com/films/1",
-                  "url": "https://ghibliapi.herokuapp.com/vehicles/1"
+                  "pilot": "https://ghibliapi.herokuapp.com/people/40c005ce-3725-4f15-8409-3e1b1b14b583",
+                  "films": "https://ghibliapi.herokuapp.com/films/2baf70d1-42bb-4437-b551-e5fed5a87abe",
+                  "url": "https://ghibliapi.herokuapp.com/films/2baf70d1-42bb-4437-b551-e5fed5a87abe"
                 },
                 {
-                  "id": 2,
+                  "id": "d8f893b5-1dd9-41a1-9918-0099c1aa2de8",
                   "name": "Red Wing",
                   "description": "An experimental aircraft captured by Porco. Named Savoia S.21",
                   "vehicle_class": "Airplane",
                   "length": "20",
-                  "pilot": "https://ghibliapi.herokuapp.com/people/15",
-                  "films": "https://ghibliapi.herokuapp.com/films/6",
-                  "url": "https://ghibliapi.herokuapp.com/vehicles/2"
+                  "pilot": "https://ghibliapi.herokuapp.com/people/6523068d-f5a9-4150-bf5b-76abe6fb42c3",
+                  "films": "https://ghibliapi.herokuapp.com/films/ebbb6b7c-945c-41ee-a792-de0e43191bd8",
+                  "url": "https://ghibliapi.herokuapp.com/vehicles/d8f893b5-1dd9-41a1-9918-0099c1aa2de8"
                 }
                 ]
         '400':
@@ -780,14 +771,14 @@ paths:
           examples:
               application/json:
                 {
-                  "id": 3,
+                  "id": "923d70c9-8f15-4972-ad53-0128b261d628",
                   "name": "Sosuke's Boat",
                   "description": "A toy boat where Sosuke plays",
                   "vehicle_class": "Boat",
                   "length": "10",
-                  "pilot": "https://ghibliapi.herokuapp.com/people/16",
-                  "films": "https://ghibliapi.herokuapp.com/films/15",
-                  "url": "https://ghibliapi.herokuapp.com/vehicles/3"
+                  "pilot": "https://ghibliapi.herokuapp.com/people/a10f64f3-e0b6-4a94-bf30-87ad8bc51607",
+                  "films": "https://ghibliapi.herokuapp.com/films/758bf02e-3122-46e0-884e-67cf83df1786",
+                  "url": "https://ghibliapi.herokuapp.com/films/758bf02e-3122-46e0-884e-67cf83df1786"
                 }
         '400':
           description: Bad request
