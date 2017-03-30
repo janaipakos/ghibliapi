@@ -372,7 +372,7 @@
       "vehicles": [
         "https://ghibliapi.herokuapp.com/vehicles/"
       ],
-      "url": "https://ghibliapi.herokpp.com/films/45db04e4-304a-4933-9823-33f389e8d74d"
+      "url": "https://ghibliapi.herokuapp.com/films/45db04e4-304a-4933-9823-33f389e8d74d"
     },
     {
       "id": "67405111-37a5-438f-81cc-4666af60c800",
