@@ -57,14 +57,14 @@ info:
       import Data.Aeson
 
       main = do
-          jsonData <- L.readFile "cats.json"
-          let ghibliResponse = decode jsonData :: Maybe GhibliCatResponse
+          fileData <- L.readFile "cats.json"
+          let ghibliResponse = decode fileData :: Maybe GhibliCatResponse
           let ghibliResults = people <$> ghibliResponse
-          printCat ghibliResults
+          findCat ghibliResults
 
-      printCat :: Maybe [GhibliCatResult] -> IO ()
-      printCat Nothing = print "error loading data"
-      printCat (Just people) = do
+      findCat :: Maybe [GhibliCatResult] -> IO ()
+      findCat Nothing = print "data not found"
+      findCat (Just people) = do
           print $ T.pack "Studio Ghibli Cats:"
           forM_ people $ \person -> do
               let dataName = name person
