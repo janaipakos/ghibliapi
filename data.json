@@ -1,7 +1,7 @@
 {
   "films": [
     {
-     "id": "2baf70d1-42bb-4437-b551-e5fed5a87abe",
+      "id": "2baf70d1-42bb-4437-b551-e5fed5a87abe",
       "title": "Castle in the Sky",
       "description": "The orphan Sheeta inherited a mysterious crystal that links her to the mythical sky-kingdom of Laputa. With the help of resourceful Pazu and a rollicking band of sky pirates, she makes her way to the ruins of the once-great civilization. Sheeta and Pazu must outwit the evil Muska, who plans to use Laputa's science to make himself ruler of the world.",
       "director": "Hayao Miyazaki",
@@ -66,7 +66,7 @@
       ],
       "url": "https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49"
     },
-     {
+    {
       "id": "ea660b10-85c4-4ae3-8a5f-41cea3648e3e",
       "title": "Kiki's Delivery Service",
       "description": "A young witch, on her mandatory year of independent life, finds fitting into a new community difficult while she supports herself by running an air courier service.",
@@ -185,10 +185,21 @@
       "release_date": 1997,
       "rt_score": 92,
       "people": [
-        "https://ghibliapi.herokuapp.com/people/"
+        "https://ghibliapi.herokuapp.com/people/ba924631-068e-4436-b6de-f3283fa848f0",
+        "https://ghibliapi.herokuapp.com/people/ebe40383-aad2-4208-90ab-698f00c581ab",
+        "https://ghibliapi.herokuapp.com/people/030555b3-4c92-4fce-93fb-e70c3ae3df8b",
+        "https://ghibliapi.herokuapp.com/people/ca568e87-4ce2-4afa-a6c5-51f4ae80a60b",
+        "https://ghibliapi.herokuapp.com/people/e9356bb5-4d4a-4c93-aadc-c83e514bffe3",
+        "https://ghibliapi.herokuapp.com/people/34277bec-7401-43fa-a00a-5aee64b45b08",
+        "https://ghibliapi.herokuapp.com/people/91939012-90b9-46e5-a649-96b898073c82",
+        "https://ghibliapi.herokuapp.com/people/20e3bd33-b35d-41e6-83a4-57ca7f028d38",
+        "https://ghibliapi.herokuapp.com/people/8bccdc78-545b-49f4-a4c8-756163a38c91",
+        "https://ghibliapi.herokuapp.com/people/116bfe1b-3ba8-4fa0-8f72-88537a493cb9"
       ],
       "species": [
-        "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2"
+        "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+        "https://ghibliapi.herokuapp.com/species/6bc92fdd-b0f4-4286-ad71-1f99fb4a0d1e",
+        "https://ghibliapi.herokuapp.com/species/f25fa661-3073-414d-968a-ab062e3065f7"
       ],
       "locations": [
         "https://ghibliapi.herokuapp.com/locations/"
@@ -445,21 +456,99 @@
     {
       "id": "ba924631-068e-4436-b6de-f3283fa848f0",
       "name": "Ashitaka",
-      "gender": "male",
+      "gender": "Male",
       "age": "late teens",
-      "eye_color": "brown",
-      "hair_color": "brown",
+      "eye_color": "Brown",
+      "hair_color": "Brown",
       "films": [
         "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
       ],
-      "species":                  "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+      "species": "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
       "url": "https://ghibliapi.herokuapp.com/people/ba924631-068e-4436-b6de-f3283fa848f0"
+    },
+    {
+      "id": "ebe40383-aad2-4208-90ab-698f00c581ab",
+      "name": "San",
+      "gender": "Female",
+      "age": "17",
+      "eye_color": "Brown",
+      "hair_color": "Brown",
+      "films": [
+        "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
+      ],
+      "species": "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+      "url": "https://ghibliapi.herokuapp.com/people/ebe40383-aad2-4208-90ab-698f00c581ab"
+    },
+    {
+      "id": "34277bec-7401-43fa-a00a-5aee64b45b08",
+      "name": "Eboshi",
+      "gender": "Female",
+      "age": "Unspecified/Adult",
+      "eye_color": "Hazel",
+      "hair_color": "Black",
+      "films": [
+        "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
+      ],
+      "species": "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+      "url": "https://ghibliapi.herokuapp.com/people/34277bec-7401-43fa-a00a-5aee64b45b08"
+    },
+    {
+      "id": "91939012-90b9-46e5-a649-96b898073c82",
+      "name": "Jigo",
+      "gender": "Male",
+      "age": "Middle age",
+      "eye_color": "Black",
+      "hair_color": "Brown",
+      "films": [
+        "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
+      ],
+      "species": "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+      "url": "https://ghibliapi.herokuapp.com/people/91939012-90b9-46e5-a649-96b898073c82"
+    },
+    {
+      "id": "20e3bd33-b35d-41e6-83a4-57ca7f028d38",
+      "name": "Kohroku",
+      "gender": "Male",
+      "age": "Adult",
+      "eye_color": "Black",
+      "hair_color": "Brown",
+      "films": [
+        "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
+      ],
+      "species": "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+      "url": "https://ghibliapi.herokuapp.com/people/20e3bd33-b35d-41e6-83a4-57ca7f028d38"
+    },
+    {
+      "id": "8bccdc78-545b-49f4-a4c8-756163a38c91",
+      "name": "Gonza",
+      "gender": "Male",
+      "age": "Adult",
+      "eye_color": "Grey",
+      "hair_color": "Bald, but beard is Brown",
+      "films": [
+        "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
+      ],
+      "species": "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+      "url": "https://ghibliapi.herokuapp.com/people/8bccdc78-545b-49f4-a4c8-756163a38c91"
+    },
+    {
+      "id": "116bfe1b-3ba8-4fa0-8f72-88537a493cb9",
+      "name": "Hii-sama",
+      "gender": "Female",
+      "age": "Over 50",
+      "eye_color": "Brown",
+      "hair_color": "White",
+      "films": [
+        "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
+      ],
+      "species": "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+      "url": "https://ghibliapi.herokuapp.com/people/116bfe1b-3ba8-4fa0-8f72-88537a493cb9"
     },
     {
       "id": "030555b3-4c92-4fce-93fb-e70c3ae3df8b",
       "name": "Yakul",
       "age": "Unknown",
-      "gender": "male",
+      "gender": "Male",
       "eye_color": "Grey",
       "hair_color": "Brown",
       "films": [
@@ -474,7 +563,7 @@
       "age": "400",
       "gender": "Male",
       "eye_color": "Red",
-      "hair_color": "Light Organge",
+      "hair_color": "Light Orange",
       "films": [
         "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
       ],
@@ -715,7 +804,6 @@
       "terrain": "Marsh",
       "surface_water": "60",
       "residents": [
-        
       ],
       "films": [
         "https://ghibliapi.herokuapp.com/films/5fdfb320-2a02-49a7-94ff-5ca418cae602"
@@ -731,7 +819,6 @@
       "terrain": "",
       "surface_water": "",
       "residents": [
-        
       ],
       "films": [
         "https://ghibliapi.herokuapp.com/films/4e236f34-b981-41c3-8c65-f8c9000b94e7"
@@ -1067,10 +1154,16 @@
       "id": "af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
       "name": "Human",
       "classification": "Mammal",
-      "eye_colors": "Brown, Blue, Green",
-      "hair_colors": "Brown, Black, Blonde, Grey, white",
+      "eye_colors": "Black, Blue, Brown, Blue, Grey, Green, Hazel",
+      "hair_colors": "Black, Blonde, Brown, Grey, White",
       "people": [
-        "https://ghibliapi.herokuapp.com/people/ba924631-068e-4436-b6de-f3283fa848f0"
+        "https://ghibliapi.herokuapp.com/people/ba924631-068e-4436-b6de-f3283fa848f0",
+        "https://ghibliapi.herokuapp.com/people/e9356bb5-4d4a-4c93-aadc-c83e514bffe3",
+        "https://ghibliapi.herokuapp.com/people/34277bec-7401-43fa-a00a-5aee64b45b08",
+        "https://ghibliapi.herokuapp.com/people/91939012-90b9-46e5-a649-96b898073c82",
+        "https://ghibliapi.herokuapp.com/people/20e3bd33-b35d-41e6-83a4-57ca7f028d38",
+        "https://ghibliapi.herokuapp.com/people/8bccdc78-545b-49f4-a4c8-756163a38c91",
+        "https://ghibliapi.herokuapp.com/people/116bfe1b-3ba8-4fa0-8f72-88537a493cb9"
       ],
       "films": [
         "https://ghibliapi.herokuapp.com/films/2baf70d1-42bb-4437-b551-e5fed5a87abe",
@@ -1096,21 +1189,22 @@
       ],
       "url": "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2"
     },
-    { 
+    {
       "id": "6bc92fdd-b0f4-4286-ad71-1f99fb4a0d1e",
       "name": "Deer",
       "classification": "Elk",
-      "eye_colors": "Black",
-      "hair_colors": "NA",
+      "eye_colors": "Black, Red",
+      "hair_colors": "Brown, Light Orange",
       "url": "https://ghibliapi.herokuapp.com/species/6bc92fdd-b0f4-4286-ad71-1f99fb4a0d1e",
       "people": [
-        "Yakul"
+        "https://ghibliapi.herokuapp.com/people/030555b3-4c92-4fce-93fb-e70c3ae3df8b",
+        "https://ghibliapi.herokuapp.com/people/ca568e87-4ce2-4afa-a6c5-51f4ae80a60b"
       ],
       "films": [
         "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
       ]
     },
-    { 
+    {
       "id": "b5a92d0e-5fb4-43d4-ba60-c012135958e4",
       "name": "Spirit",
       "classification": "Spirit",
@@ -1124,7 +1218,7 @@
         "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
       ]
     },
-    { 
+    {
       "id": "f25fa661-3073-414d-968a-ab062e3065f7",
       "name": "God",
       "classification": "God",
@@ -1132,13 +1226,13 @@
       "hair_colors": "White",
       "url": "https://ghibliapi.herokuapp.com/species/f25fa661-3073-414d-968a-ab062e3065f7",
       "people": [
-        "Moro"
+        "https://ghibliapi.herokuapp.com/people/e9356bb5-4d4a-4c93-aadc-c83e514bffe3"
       ],
       "films": [
         "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
       ]
     },
-    { 
+    {
       "id": "603428ba-8a86-4b0b-a9f1-65df6abef3d3",
       "name": "Cat",
       "classification": "Mammal",
