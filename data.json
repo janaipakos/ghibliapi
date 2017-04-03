@@ -53,10 +53,19 @@
       "release_date": 1988,
       "rt_score": 93,
       "people": [
-        "https://ghibliapi.herokuapp.com/people/"
+        "https://ghibliapi.herokuapp.com/people/986faac6-67e3-4fb8-a9ee-bad077c2e7fe",
+        "https://ghibliapi.herokuapp.com/people/d5df3c04-f355-4038-833c-83bd3502b6b9",
+        "https://ghibliapi.herokuapp.com/people/3031caa8-eb1a-41c6-ab93-dd091b541e11",
+        "https://ghibliapi.herokuapp.com/people/87b68b97-3774-495b-bf80-495a5f3e672d",
+        "https://ghibliapi.herokuapp.com/people/d39deecb-2bd0-4770-8b45-485f26e1381f",
+        "https://ghibliapi.herokuapp.com/people/f467e18e-3694-409f-bdb3-be891ade1106",
+        "https://ghibliapi.herokuapp.com/people/08ffbce4-7f94-476a-95bc-76d3c3969c19",
+        "https://ghibliapi.herokuapp.com/people/0f8ef701-b4c7-4f15-bd15-368c7fe38d0a"
       ],
       "species": [
-        "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2"
+        "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+        "https://ghibliapi.herokuapp.com/species/603428ba-8a86-4b0b-a9f1-65df6abef3d3",
+        "https://ghibliapi.herokuapp.com/species/74b7f547-1577-4430-806c-c358c8b6bcf5"
       ],
       "locations": [
         "https://ghibliapi.herokuapp.com/locations/"
@@ -595,6 +604,97 @@
       ],
       "species": "https://ghibliapi.herokuapp.com/species/603428ba-8a86-4b0b-a9f1-65df6abef3d3",
       "url": "https://ghibliapi.herokuapp.com/people/7151abc6-1a9e-4e6a-9711-ddb50ea572ec"
+    },
+    {
+      "id": "986faac6-67e3-4fb8-a9ee-bad077c2e7fe",
+      "name": "Satsuki Kusakabe",
+      "gender": "Female",
+      "age": "11",
+      "eye_color": "Dark Brown/Black",
+      "hair_color": "Dark Brown",
+      "films": [
+        "https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49"
+      ],
+      "species": "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+      "url": "https://ghibliapi.herokuapp.com/people/986faac6-67e3-4fb8-a9ee-bad077c2e7fe"
+    },
+    {
+      "id": "d5df3c04-f355-4038-833c-83bd3502b6b9",
+      "name": "Mei Kusakabe",
+      "gender": "Female",
+      "age": "4",
+      "eye_color": "Brown",
+      "hair_color": "Light Brown",
+      "films": [
+        "https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49"
+      ],
+      "species": "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+      "url": "https://ghibliapi.herokuapp.com/people/d5df3c04-f355-4038-833c-83bd3502b6b9"
+    },
+    {
+      "id": "3031caa8-eb1a-41c6-ab93-dd091b541e11",
+      "name": "Tatsuo Kusakabe",
+      "gender": "Male",
+      "age": "37",
+      "eye_color": "Brown",
+      "hair_color": "Dark Brown",
+      "films": [
+        "https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49"
+      ],
+      "species": "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+      "url": "https://ghibliapi.herokuapp.com/people/3031caa8-eb1a-41c6-ab93-dd091b541e11"
+    },
+    {
+      "id": "87b68b97-3774-495b-bf80-495a5f3e672d",
+      "name": "Yasuko Kusakabe",
+      "gender": "Female",
+      "age": "Adult",
+      "eye_color": "Brown",
+      "hair_color": "Dark Brown",
+      "films": [
+        "https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49"
+      ],
+      "species": "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+      "url": "https://ghibliapi.herokuapp.com/people/87b68b97-3774-495b-bf80-495a5f3e672d"
+    },
+    {
+      "id": "08ffbce4-7f94-476a-95bc-76d3c3969c19",
+      "name": "Granny",
+      "gender": "Female",
+      "age": "Elder",
+      "eye_color": "Black",
+      "hair_color": "Grey",
+      "films": [
+        "https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49"
+      ],
+      "species": "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+      "url": "https://ghibliapi.herokuapp.com/people/08ffbce4-7f94-476a-95bc-76d3c3969c19"
+    },
+    {
+      "id": "0f8ef701-b4c7-4f15-bd15-368c7fe38d0a",
+      "name": "Kanta Ogaki",
+      "gender": "Male",
+      "age": "11",
+      "eye_color": "Brown",
+      "hair_color": "Brown",
+      "films": [
+        "https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49"
+      ],
+      "species": "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+      "url": "https://ghibliapi.herokuapp.com/people/0f8ef701-b4c7-4f15-bd15-368c7fe38d0a"
+    },
+    {
+      "id": "d39deecb-2bd0-4770-8b45-485f26e1381f",
+      "name": "Totoro",
+      "gender": "NA",
+      "age": "",
+      "eye_color": "Grey",
+      "hair_color": "Grey",
+      "films": [
+        "https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49"
+      ],
+      "species": "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+      "url": "https://ghibliapi.herokuapp.com/people/d39deecb-2bd0-4770-8b45-485f26e1381f"
     },
     {
       "id": "f467e18e-3694-409f-bdb3-be891ade1106",
@@ -1163,7 +1263,13 @@
         "https://ghibliapi.herokuapp.com/people/91939012-90b9-46e5-a649-96b898073c82",
         "https://ghibliapi.herokuapp.com/people/20e3bd33-b35d-41e6-83a4-57ca7f028d38",
         "https://ghibliapi.herokuapp.com/people/8bccdc78-545b-49f4-a4c8-756163a38c91",
-        "https://ghibliapi.herokuapp.com/people/116bfe1b-3ba8-4fa0-8f72-88537a493cb9"
+        "https://ghibliapi.herokuapp.com/people/116bfe1b-3ba8-4fa0-8f72-88537a493cb9",
+        "https://ghibliapi.herokuapp.com/people/986faac6-67e3-4fb8-a9ee-bad077c2e7fe",
+        "https://ghibliapi.herokuapp.com/people/d5df3c04-f355-4038-833c-83bd3502b6b9",
+        "https://ghibliapi.herokuapp.com/people/3031caa8-eb1a-41c6-ab93-dd091b541e11",
+        "https://ghibliapi.herokuapp.com/people/87b68b97-3774-495b-bf80-495a5f3e672d",
+        "https://ghibliapi.herokuapp.com/people/08ffbce4-7f94-476a-95bc-76d3c3969c19",
+        "https://ghibliapi.herokuapp.com/people/0f8ef701-b4c7-4f15-bd15-368c7fe38d0a"
       ],
       "films": [
         "https://ghibliapi.herokuapp.com/films/2baf70d1-42bb-4437-b551-e5fed5a87abe",
@@ -1256,6 +1362,20 @@
         "https://ghibliapi.herokuapp.com/films/ff24da26-a969-4f0e-ba1e-a122ead6c6e3",
         "https://ghibliapi.herokuapp.com/films/90b72513-afd4-4570-84de-a56c312fdf81",
         "https://ghibliapi.herokuapp.com/films/2de9426b-914a-4a06-a3a0-5e6d9d3886f6"
+      ]
+    },
+    {
+      "id": "74b7f547-1577-4430-806c-c358c8b6bcf5",
+      "name": "Totoro",
+      "classification": "Mammal",
+      "eye_colors": "Grey",
+      "hair_colors": "Grey",
+      "url": "https://ghibliapi.herokuapp.com/species/74b7f547-1577-4430-806c-c358c8b6bcf5",
+      "people": [
+        "https://ghibliapi.herokuapp.com/people/d39deecb-2bd0-4770-8b45-485f26e1381f"
+      ],
+      "films": [
+        "https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49"
       ]
     }
   ],
