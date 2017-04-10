@@ -6,7 +6,7 @@ info:
       The Studio Ghibli API catalogs the people, places, and things found in the worlds of Ghibli. It was created to help users discover resources, consume them via HTTP requests, and interact with them in whatever way makes sense. Navigation can be found on the left sidebar, and the right sidebar shows examples of returned objects for successful calls.
 
       Users can raise an issue, ask for help, or find a contribution guide at the main repo: [https://github.com/janaipakos/ghibliapi](https://github.com/janaipakos/ghibliapi)
-  
+
     # Getting Started
       Requests can be made with `curl` or other helper libraries by following regular REST calls. For example, here is how to GET the resource for the film *My Neighbor Tororo*:
 
@@ -41,8 +41,8 @@ info:
       ### Goal: Get a list of people with the species classification as "spirit."
         - Call the species endpoint with `/species?name=spirit`
         - Call the people listed under this endpoint with `/people/<uuid>`
-        - Combine these results 
-      
+        - Combine these results
+
 
     # Use Case
       There are numerous ways for users to interact with the platform. For example, with the "people" API, users can get customized information about people, such as eye and hair color. Another example is using the "species"" API to find the different films each creature appears in. A more concrete case study is listed below:
@@ -50,7 +50,7 @@ info:
       ### A use case for finding information on all the cats of Studio Ghibli.
 
       Using the Aeson library in Haskell, the user can parse the `people` array to return all of the cats, listed under `/species/603428ba-8a86-4b0b-a9f1-65df6abef3d3`
-              
+
       ```haskell
       import qualified Data.ByteString.Lazy as L
       import GHC.Generics
@@ -78,11 +78,11 @@ info:
                                ,T.pack ', age: ', dataAge
                                ,T.pack ', hair color: ', dataHairColor
                                ,T.pack ', eye color: '', dataEyeColor
-                               ] 
+                               ]
       ```
-      
+
       The above code will return an IO Action of the requested cats.
-      
+
       ```
       "Studio Ghibli Cats:"
       "name: Jiji, gender: Male, hair color: Black, eye color: Black"
@@ -95,6 +95,11 @@ info:
       "name: Baron Humbert von Gikkingen, gender: Male, hair color: Yellow, eye color: Green"
       "name: Natori, gender: Male, hair color: Grey, eye color: Blue"
       ```
+
+    # Helper Libraries
+
+      ## Elixir
+      - [ghibli](https://github.com/sotojuan/ghibli) by [Juan Soto](https://github.com/sotojuan)
 
   version: "1.0.1"
   x-logo:
@@ -553,7 +558,7 @@ paths:
           examples:
               application/json:
                 [
-                { 
+                {
                   "id": "b5a92d0e-5fb4-43d4-ba60-c012135958e4",
                   "name": "Spirit",
                   "classification": "Spirit",
@@ -567,7 +572,7 @@ paths:
                     "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
                   ]
                 },
-                { 
+                {
                   "id": "f25fa661-3073-414d-968a-ab062e3065f7",
                   "name": "God",
                   "classification": "God",
@@ -633,7 +638,7 @@ paths:
               classification: Mammal
               eye_colors: "Brown, Black, Yellow, White, Emerald, Blue, Green"
               hair_colors: "White, Black, Brown, Beige, Grey, Yellow"
-              people: [ 
+              people: [
                 "https://ghibliapi.herokuapp.com/people/7151abc6-1a9e-4e6a-9711-ddb50ea572ec",
                 "https://ghibliapi.herokuapp.com/people/f467e18e-3694-409f-bdb3-be891ade1106",
                 "https://ghibliapi.herokuapp.com/people/89026b3a-abc4-4053-ab1a-c6d2eea68faa",
@@ -656,7 +661,7 @@ paths:
           description: Bad request
         '404':
           description: Not found
-          
+
   /vehicles:
     get:
       summary: Vehicles
