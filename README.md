@@ -34,5 +34,9 @@ Calling this resource will respond with the following object:
 ### Elixir
 - [ghibli](https://github.com/sotojuan/ghibli) by [Juan Soto](https://github.com/sotojuan)
 
+## Examples
+### Haskell
+- https://github.com/janaipakos/ghibliapi-example
+
 ## Resources
 This API was built using [JSON Server](https://github.com/typicode/json-server), [ReDoc](https://github.com/Rebilly/ReDoc), and looking through [swapi.co](https://github.com/phalt/swapi)
