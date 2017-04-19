@@ -34,6 +34,9 @@ Calling this resource will respond with the following object:
 ### Elixir
 - [ghibli](https://github.com/sotojuan/ghibli) by [Juan Soto](https://github.com/sotojuan)
 
+### Go
+- [totoro](https://github.com/Rchristiani/totoro) by [Ryan Christiani](https://github.com/Rchristiani)
+
 ## Examples
 ### Haskell
 - https://github.com/janaipakos/ghibliapi-example
