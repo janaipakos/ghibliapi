@@ -913,21 +913,6 @@
       ]
     },
     {
-      "id": "2f183537-0744-43a6-b362-a11a6adae60",
-      "name": "Taeko's House",
-      "climate": "",
-      "terrain": "",
-      "surface_water": "",
-      "residents": [
-      ],
-      "films": [
-        "https://ghibliapi.herokuapp.com/films/4e236f34-b981-41c3-8c65-f8c9000b94e7"
-      ],
-      "url": [
-        "https://ghibliapi.herokuapp.com/locations/2f183537-0744-43a6-b362-a11a6adae60"
-      ]
-    },
-    {
       "id": "660c8c91-bd92-43db-b475-b2df6ca96fec",
       "name": "Hospital",
       "climate": "Continental",
