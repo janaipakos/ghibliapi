@@ -43,6 +43,10 @@ Calling this resource will respond with the following object:
 ### R
 - [ghibliapi](https://github.com/onertipaday/ghibliapi) by [Paolo](https://github.com/onertipaday)
 
+### Python2 and Python3
+- [python_studio_ghibli_api_sdk](https://github.com/Incognito/python_studio_ghibli_api_sdk) by [Incognito](https://github.com/Incognito)
+
+
 ## Examples
 ### Android
 - https://github.com/txemasv/ghibli-films
