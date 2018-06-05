@@ -131,14 +131,12 @@ paths:
       tags:
         - Films
       parameters:
-        - fields:
-          name: fields
+        - name: fields
           in: query
           description: comma-separated list of fields to include in the response
           required: false
           type: string
-        - limit:
-          name: limit
+        - name: limit
           in: query
           required: false
           description: amount of results (default 50) (maximum 250)
@@ -229,9 +227,7 @@ paths:
         200:
           description: A single film is returned
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Films'
+            $ref: '#/definitions/Films'
           examples:
             application/json:
               id: 2baf70d1-42bb-4437-b551-e5fed5a87abe
@@ -253,14 +249,12 @@ paths:
       tags:
         - People
       parameters:
-        - fields:
-          name: fields
+        - name: fields
           in: query
           description: comma-separated list of fields to include in the response
           required: false
           type: string
-        - limit:
-          name: limit
+        - name: limit
           in: query
           required: false
           description: amount of results (default 50) (maximum 250)
@@ -358,9 +352,7 @@ paths:
         200:
           description: A single person is returned
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/People'
+            $ref: '#/definitions/People'
           examples:
             application/json:
               id: ba924631-068e-4436-b6de-f3283fa848f0
@@ -383,14 +375,12 @@ paths:
       tags:
         - Locations
       parameters:
-        - fields:
-          name: fields
+        - name: fields
           in: query
           description: comma-separated list of fields to include in the response
           required: false
           type: string
-        - limit:
-          name: limit
+        - name: limit
           in: query
           required: false
           description: amount of results (default 50) (maximum 250)
@@ -495,9 +485,7 @@ paths:
         200:
           description: A single location is returned
           schema:
-            type: object
-            items:
-              $ref: '#/definitions/Locations'
+            $ref: '#/definitions/Locations'
           examples:
             application/json:
               id: 1
@@ -505,7 +493,7 @@ paths:
               climate: Continental
               terrain: Mountain
               surface_water: 40
-              residents: [https://ghibliapi.herokuapp.com/people/ba924631-068e-4436-b6de-f3283fa848f0]
+              residents: [ 'https://ghibliapi.herokuapp.com/people/ba924631-068e-4436-b6de-f3283fa848f0' ]
               films: https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6
               url: https://ghibliapi.herokuapp.com/locations/11014596-71b0-4b3e-b8c0-1c4b15f28b9a
         '400':
@@ -520,14 +508,12 @@ paths:
       tags:
         - Species
       parameters:
-        - fields:
-          name: fields
+        - name: fields
           in: query
           description: comma-separated list of fields to include in the response
           required: false
           type: string
-        - limit:
-          name: limit
+        - name: limit
           in: query
           required: false
           description: amount of results (default 50) (maximum 250)
@@ -628,9 +614,7 @@ paths:
         200:
           description: A single species is returned
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Species'
+            $ref: '#/definitions/Species'
           examples:
             application/json:
               id: 603428ba-8a86-4b0b-a9f1-65df6abef3d3
@@ -670,14 +654,12 @@ paths:
       tags:
         - Vehicles
       parameters:
-        - fields:
-          name: fields
+        - name: fields
           in: query
           description: comma-separated list of fields to include in the response
           required: false
           type: string
-        - limit:
-          name: limit
+        - name: limit
           in: query
           required: false
           description: amount of results (default 50) (maximum 250)
@@ -770,9 +752,7 @@ paths:
         200:
           description: A single vehicle is returned
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Vehicles'
+            $ref: '#/definitions/Vehicles'
           examples:
               application/json:
                 {
@@ -794,7 +774,7 @@ definitions:
     type: object
     properties:
       id:
-        type: integer
+        type: string
         description: Unique identifier representing a specific film
       title:
         type: string
@@ -860,7 +840,7 @@ definitions:
     type: object
     properties:
       id:
-        type: integer
+        type: string
         description: Unique identifier representing a specific location
       name:
         type: string
@@ -869,19 +849,21 @@ definitions:
         type: string
         description: Climate of location
       terrain:
-        type: integer
+        type: string
         description: Terrain type of location
       surface_water:
         type: string
         description: Percent of location covered in water
       residents:
-        type: integer
+        type: array
+        items:
+          type: string
         description: Array of residents in location
       films:
         type: string
         description: Climate of location
       url:
-        type: integer
+        type: string
         description: Individual URL of the location
   Species:
     type: object
@@ -905,7 +887,9 @@ definitions:
         type: string
         description: People belonging to the species
       films:
-        type: string
+        type: array
+        items:
+          type: string
         description: Array of films the species appears in
       url:
         type: string
@@ -932,7 +916,9 @@ definitions:
         type: string
         description: Pilot of the vehicle
       films:
-        type: string
+        type: array
+        items:
+          type: string
         description: Array of films the vehicle appears in
       url:
         type: string
