@@ -496,9 +496,9 @@ paths:
               residents: [ 'https://ghibliapi.herokuapp.com/people/ba924631-068e-4436-b6de-f3283fa848f0' ]
               films: https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6
               url: https://ghibliapi.herokuapp.com/locations/11014596-71b0-4b3e-b8c0-1c4b15f28b9a
-        400':
+        '400':
           description: Bad request
-        404:
+        '404':
           description: Not found
   /species:
     get:
