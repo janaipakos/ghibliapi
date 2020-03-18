@@ -33,7 +33,7 @@ info:
       `https://ghibliapi.herokuapp.com`
 
     # Authentication
-       There is no authentication necessary for the Studio Ghbili API.
+       There is no authentication necessary for the Studio Ghibli API.
 
     # Workflow
       Endpoints can be used by themselves, or combined with one another to retrieve more specific information. An example workflow is listed below:
