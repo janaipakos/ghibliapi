@@ -1267,7 +1267,7 @@
       "id": "af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
       "name": "Human",
       "classification": "Mammal",
-      "eye_colors": "Black, Blue, Brown, Blue, Grey, Green, Hazel",
+      "eye_colors": "Black, Blue, Brown, Grey, Green, Hazel",
       "hair_colors": "Black, Blonde, Brown, Grey, White",
       "people": [
         "https://ghibliapi.herokuapp.com/people/ba924631-068e-4436-b6de-f3283fa848f0",
