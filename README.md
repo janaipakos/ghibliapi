@@ -48,6 +48,9 @@ Calling this resource will respond with the following object:
 
 
 ## Examples
+### Swift (iOS)
+- https://github.com/kxvn-lx/Ghibliii
+
 ### Android
 - https://github.com/txemasv/ghibli-films
 
