@@ -521,6 +521,31 @@
                 "https://ghibliapi.herokuapp.com/vehicles/"
             ],
             "url": "https://ghibliapi.herokuapp.com/films/5fdfb320-2a02-49a7-94ff-5ca418cae602"
+        },
+        {
+            "id": "d868e6ec-c44a-405b-8fa6-f7f0f8cfb500",
+            "title": "The Red Turtle",
+            "original_title": "レッドタートル ある島の物語",
+            "original_title_romanised": "Reddotātoru aru shima no monogatari",
+            "description": "A man set adrift by a storm wakes up on a beach. He discovers that he is on a deserted island with plenty of fresh water, fruit and a dense bamboo forest. He builds a raft from bamboo and attempts to sail away, but his raft is destroyed by an unseen monster in the sea, forcing him back to the island. He tries again with another, larger raft, but is again foiled by the creature. A third attempt again ends with the raft destroyed, but this time he is confronted by a giant red turtle, which stares at him, and forces him back to the island.",
+            "director": "Michaël Dudok de Wit",
+            "producer": "Toshio Suzuki, Isao Takahata, Vincent Maraval, Pascal Caucheteux, Grégoire Sorlat",
+            "release_date": "2016",
+            "running_time": "80",
+            "rt_score": "93",
+            "people": [
+                "https://ghibliapi.herokuapp.com/people/"
+            ],
+            "species": [
+                "https://ghibliapi.herokuapp.com/species/"
+            ],
+            "locations": [
+                "https://ghibliapi.herokuapp.com/locations/"
+            ],
+            "vehicles": [
+                "https://ghibliapi.herokuapp.com/vehicles/"
+            ],
+            "url": "https://ghibliapi.herokuapp.com/films/d868e6ec-c44a-405b-8fa6-f7f0f8cfb500"
         }
     ],
     "people": [
