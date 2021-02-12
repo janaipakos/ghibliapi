@@ -121,8 +121,6 @@ x-tagGroups:
       - Locations
       - Species
       - Vehicles
-# will be prefixed to all paths
-basePath: /
 produces:
   - application/json
 paths:
