@@ -208,8 +208,7 @@ paths:
           in: path
           description: film `id`
           required: true
-          type: integer
-          format: int64
+          type: string
         - name: fields
           in: query
           description: comma-separated list of fields to include in the response
@@ -337,8 +336,7 @@ paths:
           in: path
           description: person `id`
           required: true
-          type: integer
-          format: int64
+          type: string
         - name: fields
           in: query
           description: comma-separated list of fields to include in the response
@@ -474,8 +472,7 @@ paths:
           in: path
           description: location `id`
           required: true
-          type: integer
-          format: int64
+          type: string
         - name: fields
           in: query
           description: comma-separated list of fields to include in the response
@@ -507,7 +504,7 @@ paths:
               $ref: '#/definitions/Locations'
           examples:
             application/json:
-              id: 1
+              id: 11014596-71b0-4b3e-b8c0-1c4b15f28b9a
               name: Irontown
               climate: Continental
               terrain: Mountain
@@ -607,8 +604,7 @@ paths:
           in: path
           description: film `id`
           required: true
-          type: integer
-          format: int64
+          type: string
         - name: fields
           in: query
           description: comma-separated list of fields to include in the response
@@ -749,8 +745,7 @@ paths:
           in: path
           description: film `id`
           required: true
-          type: integer
-          format: int64
+          type: string
         - name: fields
           in: query
           description: comma-separated list of fields to include in the response
@@ -801,7 +796,7 @@ definitions:
     type: object
     properties:
       id:
-        type: integer
+        type: string
         description: Unique identifier representing a specific film
       title:
         type: string
@@ -876,7 +871,7 @@ definitions:
     type: object
     properties:
       id:
-        type: integer
+        type: string
         description: Unique identifier representing a specific location
       name:
         type: string
