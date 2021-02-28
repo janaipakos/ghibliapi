@@ -826,14 +826,25 @@ definitions:
         type: string
         description: Rotten Tomato score of film
       people:
-        type: string
+        type: array
         description: People found in film
+        items:
+          type: string
       species:
-        type: string
+        type: array
         description: Species found in film
+        items:
+          type: string
       locations:
-        type: string
+        type: array
         description: Locations found in film
+        items:
+          type: string
+      vehicles:
+        type: array
+        description: Vehicles found in film
+        items:
+          type: string
       url:
         type: string
         description: URL of film
@@ -859,8 +870,10 @@ definitions:
         type: string
         description: Hair color of the person
       films:
-        type: string
+        type: array
         description: Array of films the person appears in
+        items:
+          type: string
       species:
         type: string
         description: Species the person belongs to
@@ -880,17 +893,21 @@ definitions:
         type: string
         description: Climate of location
       terrain:
-        type: integer
+        type: string
         description: Terrain type of location
       surface_water:
         type: string
         description: Percent of location covered in water
       residents:
-        type: integer
+        type: array
         description: Array of residents in location
+        items:
+          type: string
       films:
-        type: string
-        description: Climate of location
+        type: array
+        description: Array of films the location appears in
+        items:
+          type: string
       url:
         type: integer
         description: Individual URL of the location
@@ -913,11 +930,15 @@ definitions:
         type: string
         description: Hair color of the species
       people:
-        type: string
+        type: array
         description: People belonging to the species
+        items:
+          type: string
       films:
-        type: string
+        type: array
         description: Array of films the species appears in
+        items:
+          type: string
       url:
         type: string
         description: Unique url of the species
