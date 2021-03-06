@@ -438,9 +438,7 @@ paths:
                 "films": [
                   "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
                 ],
-                "url": [
-                  "https://ghibliapi.herokuapp.com/locations/11014596-71b0-4b3e-b8c0-1c4b15f28b9a"
-                ]
+                "url": "https://ghibliapi.herokuapp.com/locations/11014596-71b0-4b3e-b8c0-1c4b15f28b9a"
               },
               {
                 "id": "11014596-71b0-4b3e-b8c0-1c4b15f28b9a",
@@ -455,9 +453,7 @@ paths:
                 "films": [
                   "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
                 ],
-                "url": [
-                  "https://ghibliapi.herokuapp.com/locations/11014596-71b0-4b3e-b8c0-1c4b15f28b9a"
-                ]
+                "url": "https://ghibliapi.herokuapp.com/locations/11014596-71b0-4b3e-b8c0-1c4b15f28b9a"
               }]
         '400':
           description: Bad request
@@ -509,8 +505,12 @@ paths:
               climate: Continental
               terrain: Mountain
               surface_water: 40
-              residents: [https://ghibliapi.herokuapp.com/people/ba924631-068e-4436-b6de-f3283fa848f0]
-              films: https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6
+              residents: [
+                https://ghibliapi.herokuapp.com/people/ba924631-068e-4436-b6de-f3283fa848f0
+              ]
+              films: [ 
+                https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6
+              ]
               url: https://ghibliapi.herokuapp.com/locations/11014596-71b0-4b3e-b8c0-1c4b15f28b9a
         '400':
           description: Bad request
@@ -717,7 +717,9 @@ paths:
                   "vehicle_class": "Airship",
                   "length": "1,000",
                   "pilot": "https://ghibliapi.herokuapp.com/people/40c005ce-3725-4f15-8409-3e1b1b14b583",
-                  "films": "https://ghibliapi.herokuapp.com/films/2baf70d1-42bb-4437-b551-e5fed5a87abe",
+                  "films": [
+                    "https://ghibliapi.herokuapp.com/films/2baf70d1-42bb-4437-b551-e5fed5a87abe"
+                  ],
                   "url": "https://ghibliapi.herokuapp.com/films/2baf70d1-42bb-4437-b551-e5fed5a87abe"
                 },
                 {
@@ -727,7 +729,9 @@ paths:
                   "vehicle_class": "Airplane",
                   "length": "20",
                   "pilot": "https://ghibliapi.herokuapp.com/people/6523068d-f5a9-4150-bf5b-76abe6fb42c3",
-                  "films": "https://ghibliapi.herokuapp.com/films/ebbb6b7c-945c-41ee-a792-de0e43191bd8",
+                  "films": [
+                    "https://ghibliapi.herokuapp.com/films/ebbb6b7c-945c-41ee-a792-de0e43191bd8"
+                  ],
                   "url": "https://ghibliapi.herokuapp.com/vehicles/d8f893b5-1dd9-41a1-9918-0099c1aa2de8"
                 }
                 ]
@@ -784,7 +788,9 @@ paths:
                   "vehicle_class": "Boat",
                   "length": "10",
                   "pilot": "https://ghibliapi.herokuapp.com/people/a10f64f3-e0b6-4a94-bf30-87ad8bc51607",
-                  "films": "https://ghibliapi.herokuapp.com/films/758bf02e-3122-46e0-884e-67cf83df1786",
+                  "films": [
+                    "https://ghibliapi.herokuapp.com/films/758bf02e-3122-46e0-884e-67cf83df1786"
+                  ],
                   "url": "https://ghibliapi.herokuapp.com/films/758bf02e-3122-46e0-884e-67cf83df1786"
                 }
         '400':
@@ -909,7 +915,7 @@ definitions:
         items:
           type: string
       url:
-        type: integer
+        type: string
         description: Individual URL of the location
   Species:
     type: object
@@ -964,8 +970,10 @@ definitions:
         type: string
         description: Pilot of the vehicle
       films:
-        type: string
+        type: array
         description: Array of films the vehicle appears in
+        items:
+          type: string
       url:
         type: string
         description: Unique URL of the vehicle
