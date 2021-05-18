@@ -45,8 +45,6 @@ router.render = (req, res) => {
     if (data.constructor === Array) {
       data.length = Math.min(Math.min(query.limit, data.length), maxLimit)
     }
-  } else {
-    data.length = Math.min(defaultLimit, data.length)
   }
   res.jsonp(data)
 }
