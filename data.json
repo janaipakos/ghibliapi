@@ -1587,17 +1587,17 @@
         },
         {
             "id": "e2cfaa78-fb19-11eb-9a03-0242ac130003",
-            "name": "Kodama",
-            "classification": "Spirit",
-            "eye_colors": "Black",
-            "hair_colors": "White",
+            "name": "Dragon",
+            "classification": "Dragon",
+            "eye_colors": "Orange, Green, Red",
+            "hair_colors": "White, Green, Gray",
             "url": "https://ghibliapi.herokuapp.com/species/e2cfaa78-fb19-11eb-9a03-0242ac130003",
             "people": [
-                "https://ghibliapi.herokuapp.com/people/ba924631-068e-4436-b6de-f3283fa848f0",
-                "https://ghibliapi.herokuapp.com/people/ebe40383-aad2-4208-90ab-698f00c581ab"
+                "https://ghibliapi.herokuapp.com/people/267649ac-fb1b-11eb-9a03-0242ac130003"
             ],
             "films": [
-                "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
+                "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6",
+                "https://ghibliapi.herokuapp.com/films/2baf70d1-42bb-4437-b551-e5fed5a87abe"
             ]
         }
     ],
