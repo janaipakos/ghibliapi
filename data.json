@@ -105,7 +105,10 @@
             "rt_score": "96",
             "people": [
                 "https://ghibliapi.herokuapp.com/people/2409052a-9029-4e8d-bfaf-70fd82c8e48d",
-                "https://ghibliapi.herokuapp.com/people/7151abc6-1a9e-4e6a-9711-ddb50ea572ec"
+                "https://ghibliapi.herokuapp.com/people/7151abc6-1a9e-4e6a-9711-ddb50ea572ec",
+                "https://ghibliapi.herokuapp.com/people/1c1a8054-3a34-4185-bfcf-e8011506f09a",
+                "https://ghibliapi.herokuapp.com/people/bc838920-7849-43ea-bfb8-7d5e98dc20b6",
+                "https://ghibliapi.herokuapp.com/people/33f5fea9-c21b-490b-90e0-c4051c372826"
             ],
             "species": [
                 "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
@@ -936,7 +939,7 @@
         },
         {
             "id": "0f8ef701-b4c7-4f15-bd15-368c7fe38d0a",
-            "name": "Kanta Ogaki",
+            "name": "Kanta Ōgaki",
             "gender": "Male",
             "age": "11",
             "eye_color": "Brown",
@@ -1169,6 +1172,45 @@
             ],
             "species": "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
             "url": "https://ghibliapi.herokuapp.com/people/8228751c-bdc1-4b8d-a6eb-ca0eb909568f"
+        },
+        {
+            "id": "1c1a8054-3a34-4185-bfcf-e8011506f09a",
+            "name": "Osono",
+            "gender": "Female",
+            "age": "26",
+            "eye_color": "Black",
+            "hair_color": "Red",
+            "films": [
+                "https://ghibliapi.herokuapp.com/films/ea660b10-85c4-4ae3-8a5f-41cea3648e3e"
+            ],
+            "species": "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+            "url": "https://ghibliapi.herokuapp.com/people/1c1a8054-3a34-4185-bfcf-e8011506f09a"
+        },
+        {
+            "id": "bc838920-7849-43ea-bfb8-7d5e98dc20b6",
+            "name": "Ursula",
+            "gender": "Female",
+            "age": "18",
+            "eye_color": "Black",
+            "hair_color": "Reddish brown",
+            "films": [
+                "https://ghibliapi.herokuapp.com/films/ea660b10-85c4-4ae3-8a5f-41cea3648e3e"
+            ],
+            "species": "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+            "url": "https://ghibliapi.herokuapp.com/people/bc838920-7849-43ea-bfb8-7d5e98dc20b6"
+        },
+        {
+            "id": "33f5fea9-c21b-490b-90e0-c4051c372826",
+            "name": "Tombo",
+            "gender": "Male",
+            "age": "13",
+            "eye_color": "Black",
+            "hair_color": "Dirty Blond",
+            "films": [
+                "https://ghibliapi.herokuapp.com/films/ea660b10-85c4-4ae3-8a5f-41cea3648e3e"
+            ],
+            "species": "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+            "url": "https://ghibliapi.herokuapp.com/people/33f5fea9-c21b-490b-90e0-c4051c372826"
         }
     ],
     "locations": [
@@ -1536,7 +1578,9 @@
                 "https://ghibliapi.herokuapp.com/people/08ffbce4-7f94-476a-95bc-76d3c3969c19",
                 "https://ghibliapi.herokuapp.com/people/0f8ef701-b4c7-4f15-bd15-368c7fe38d0a",
                 "https://ghibliapi.herokuapp.com/people/2409052a-9029-4e8d-bfaf-70fd82c8e48d",
-                "https://ghibliapi.herokuapp.com/people/8228751c-bdc1-4b8d-a6eb-ca0eb909568f"
+                "https://ghibliapi.herokuapp.com/people/8228751c-bdc1-4b8d-a6eb-ca0eb909568f",
+                "https://ghibliapi.herokuapp.com/people/1c1a8054-3a34-4185-bfcf-e8011506f09a",
+                "https://ghibliapi.herokuapp.com/people/bc838920-7849-43ea-bfb8-7d5e98dc20b6"
             ],
             "films": [
                 "https://ghibliapi.herokuapp.com/films/2baf70d1-42bb-4437-b551-e5fed5a87abe",
@@ -1558,7 +1602,8 @@
                 "https://ghibliapi.herokuapp.com/films/45db04e4-304a-4933-9823-33f389e8d74d",
                 "https://ghibliapi.herokuapp.com/films/67405111-37a5-438f-81cc-4666af60c800",
                 "https://ghibliapi.herokuapp.com/films/578ae244-7750-4d9f-867b-f3cd3d6fecf4",
-                "https://ghibliapi.herokuapp.com/films/5fdfb320-2a02-49a7-94ff-5ca418cae602"
+                "https://ghibliapi.herokuapp.com/films/5fdfb320-2a02-49a7-94ff-5ca418cae602",
+                "https://ghibliapi.herokuapp.com/people/33f5fea9-c21b-490b-90e0-c4051c372826"
             ],
             "url": "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2"
         },
