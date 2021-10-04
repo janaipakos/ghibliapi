@@ -1595,7 +1595,8 @@
                 "https://ghibliapi.herokuapp.com/people/8228751c-bdc1-4b8d-a6eb-ca0eb909568f",
                 "https://ghibliapi.herokuapp.com/people/1c1a8054-3a34-4185-bfcf-e8011506f09a",
                 "https://ghibliapi.herokuapp.com/people/bc838920-7849-43ea-bfb8-7d5e98dc20b6",
-                "https://ghibliapi.herokuapp.com/people/d1de1c0e-3fcd-4cef-94eb-bb95cc2314aa"
+                "https://ghibliapi.herokuapp.com/people/d1de1c0e-3fcd-4cef-94eb-bb95cc2314aa",
+                "https://ghibliapi.herokuapp.com/people/33f5fea9-c21b-490b-90e0-c4051c372826"
             ],
             "films": [
                 "https://ghibliapi.herokuapp.com/films/2baf70d1-42bb-4437-b551-e5fed5a87abe",
@@ -1617,8 +1618,7 @@
                 "https://ghibliapi.herokuapp.com/films/45db04e4-304a-4933-9823-33f389e8d74d",
                 "https://ghibliapi.herokuapp.com/films/67405111-37a5-438f-81cc-4666af60c800",
                 "https://ghibliapi.herokuapp.com/films/578ae244-7750-4d9f-867b-f3cd3d6fecf4",
-                "https://ghibliapi.herokuapp.com/films/5fdfb320-2a02-49a7-94ff-5ca418cae602",
-                "https://ghibliapi.herokuapp.com/people/33f5fea9-c21b-490b-90e0-c4051c372826"
+                "https://ghibliapi.herokuapp.com/films/5fdfb320-2a02-49a7-94ff-5ca418cae602"
             ],
             "url": "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2"
         },
