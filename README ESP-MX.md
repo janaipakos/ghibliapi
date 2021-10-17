@@ -47,7 +47,7 @@ Al llamar a este recurso responderá con el siguiente objeto:
 - [python_studio_ghibli_api_sdk](https://github.com/Incognito/python_studio_ghibli_api_sdk) por [Incognito](https://github.com/Incognito)
 
 
-## Examples
+## Ejemplos
 ### Swift (iOS)
 - https://github.com/kxvn-lx/Ghibliii
 
@@ -57,12 +57,12 @@ Al llamar a este recurso responderá con el siguiente objeto:
 ### Haskell
 - https://github.com/janaipakos/ghibliapi-example
 
-### Datascript and Clojure
+### Datascript y Clojure
 - https://cjohansen.no/a-unified-specification/
 
 ### JavaScript
 - https://github.com/mazipan/ghibli-fans
 - https://github.com/taniarascia/sandbox/tree/master/ghibli
 
-## Resources
+## Recursos
 Esta API fue construida usando [JSON Server](https://github.com/typicode/json-server), [ReDoc](https://github.com/Rebilly/ReDoc), y mostrada a través de [swapi.co](https://github.com/phalt/swapi)
