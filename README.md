@@ -46,6 +46,8 @@ Calling this resource will respond with the following object:
 ### Python2 and Python3
 - [python_studio_ghibli_api_sdk](https://github.com/Incognito/python_studio_ghibli_api_sdk) by [Incognito](https://github.com/Incognito)
 
+### Javascript
+- [Ghibli](https://github.com/MattPlays/ghibli.js) by [MattPlays](https://github.com/MattPlays)
 
 ## Examples
 ### Swift (iOS)
