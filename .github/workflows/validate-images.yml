@@ -31,6 +31,7 @@ jobs:
 
       - name: "📦 Install dependencies"
         run: |
+          npm init -y
           npm install jest@^28 -g
           npm install image-url-validator@^1.0.4 -g
 
