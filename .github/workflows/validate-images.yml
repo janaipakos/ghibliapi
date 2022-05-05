@@ -3,8 +3,8 @@ name: Validate Image URLs
 on:
   schedule:
     # Runs "at 12:00 every Monday" (see https://crontab.guru)
-    # - cron: '0 12 * * 1'
-    - cron: '3 * * * *'
+    - cron: '0 12 * * 1'
+  workflow_dispatch:
 
 jobs:
 
