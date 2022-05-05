@@ -1,0 +1,40 @@
+name: Validate Image URLs
+
+on:
+  schedule:
+    # Runs "at 12:00 every Monday" (see https://crontab.guru)
+    # - cron: '0 12 * * 1'
+    - cron: '3 * * * *'
+
+jobs:
+
+   link_checker:
+    runs-on: ${{ matrix.os }}
+    env:
+      working-directory: ./.github
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ['16']
+        os: [ubuntu-latest]
+
+    name: ✔️ Verify Image Links
+    steps:
+      - name: "☁️ Check out Git Repository"
+        uses: actions/checkout@v2
+
+      - name: "🔧 Set up Node"
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+          cache: 'npm'
+
+      - name: "📦 Install dependencies"
+        run: |
+          npm install jest@^28 -g
+          npm install image-url-validator@^1.0.4 -g
+
+      - name: "✅ Run Tests"
+        working-directory: ${{ env.working-directory }}
+        run: jest --testTimeout=30000
+
