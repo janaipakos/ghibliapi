@@ -45,6 +45,7 @@ Calling this resource will respond with the following object:
 
 ### Python2 and Python3
 - [python_studio_ghibli_api_sdk](https://github.com/Incognito/python_studio_ghibli_api_sdk) by [Incognito](https://github.com/Incognito)
+- [anime-api](https://github.com/Nekidev/anime-api) by [Nekidev](https://github.com/Nekidev)
 
 
 ## Examples
