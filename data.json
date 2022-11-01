@@ -1083,7 +1083,7 @@
     {
       "id": "2409052a-9029-4e8d-bfaf-70fd82c8e48d",
       "name": "Kiki",
-      "gander": "Female",
+      "gender": "Female",
       "age": "13",
       "eye_color": "Black",
       "hair_color": "Brown",
